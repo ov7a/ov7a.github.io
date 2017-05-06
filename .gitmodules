@@ -1,0 +1,3 @@
+[submodule "crossword"]
+	path = crossword
+	url = https://github.com/ov7a/crossword
