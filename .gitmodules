@@ -1,3 +1,6 @@
 [submodule "crossword"]
 	path = crossword
 	url = https://github.com/ov7a/crossword
+[submodule "old_js_stuff"]
+	path = old_js_stuff
+	url = https://github.com/ov7a/old_js_stuff
