@@ -1,0 +1,9 @@
+{% assign width = 560 %}
+{% assign ratio = include.ratio | default: "16:9" %}
+{% if ratio == "4:3" %}
+	{% assign height = 420 %}
+{% else %}
+	{% assign height = 315 %}
+{% endif %}
+<iframe width="{{ width }}" height="{{ height }}" src="http://www.youtube.com/embed/{{ include.video_id }}?color=white&theme=light" allowfullscreen="true"></iframe>
+
