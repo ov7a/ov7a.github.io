@@ -39,6 +39,12 @@ img {
     display: block;
 }
 
+iframe {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 0.5 * $spacing-unit; 
+}
+
 @import "_tags";
 @import "_list";
 @import "_repost";
