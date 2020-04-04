@@ -34,6 +34,11 @@ h1.post-link {
 	margin-bottom: 0px;
 }
 
+img {
+    margin: 0 auto;
+    display: block;
+}
+
 @import "_tags";
 @import "_list";
 @import "_repost";
