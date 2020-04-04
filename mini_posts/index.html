@@ -1,0 +1,48 @@
+---
+layout: default
+title: Минутка просвещения
+---
+	{%include list_header.html
+		title=page.title
+		type="timeline"
+		prefix="/mini_posts"
+	%}
+
+	<p><a href="https://tttttt.me/minutkaprosvescheniya" target="_blank">Читать в телеге</a>. Там посты не только от меня.</p>
+
+	<!-- This loops through the paginated posts -->
+	<div class="posts">
+		{% for post in paginator.posts %}
+			{% include post_content.html
+				post=post
+				discuss=false
+				header-type="list"
+			%}
+		{% endfor %}
+	</div>
+
+	{% if paginator.total_pages > 1 %}
+	<div class="pagination">
+	  {% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | relative_url }}">← </a>
+	  {% else %}
+		<span>← </span>
+	  {% endif %}
+
+	  {% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		  <span>{{ page }}</span>
+		{% elsif page == 1 %}
+		  <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+		{% else %}
+		  <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+		{% endif %}
+	  {% endfor %}
+
+	  {% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | relative_url }}"> →</a>
+	  {% else %}
+		<span> →</span>
+	  {% endif %}
+	</div>
+	{% endif %}

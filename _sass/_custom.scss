@@ -1,0 +1,39 @@
+$theme-color: #2a7ae2 !default;
+$font-font-awesome: FontAwesome;
+
+.badge {
+  display: inline-block;
+  background: rgba($theme-color, 0.15);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  color: $theme-color;
+  font-size: 90%;
+  &:hover {
+    text-decoration: none;
+    background: $theme-color;
+  }
+}
+
+.posts {
+	margin-top: 1.5 * $spacing-unit; 
+}
+
+article + article { 
+	margin-top: 1.5 * $spacing-unit; 
+}
+
+h1.post-link {
+	margin-bottom: 0px;
+}
+
+.post-content {
+	margin-bottom: 0px;
+}
+
+.post-header {
+	margin-bottom: 0px;
+}
+
+@import "_tags";
+@import "_list";
+@import "_repost";

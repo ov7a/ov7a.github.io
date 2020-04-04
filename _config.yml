@@ -1,0 +1,29 @@
+name: ov7a
+
+lsi: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+paginate: 10
+paginate_path: "/mini_posts/page:num/"
+
+theme: minima
+date_format: "%d.%m.%Y"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+header_pages:
+  - blog/index.html
+  - interactive/index.html
+  - mini_posts/index.html
+  - index.html
+
+tag_page:
+  - /blog/tags.html  
+    

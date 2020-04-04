@@ -1,0 +1,28 @@
+.list-type {
+  @extend .badge;
+  float: right;
+}
+
+.list {
+  &:before {
+    content: "\f03a";
+    font-family: $font-font-awesome;
+  }
+}
+
+.timeline {
+  &:before {
+    content: "\f0c9";
+    font-family: $font-font-awesome;
+  }
+}
+
+h1.post-list {
+  float: left;
+}
+
+.list-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}

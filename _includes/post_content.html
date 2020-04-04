@@ -1,0 +1,40 @@
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+  {% if include.header-type == "header" %}
+  <h1 class="p-name post-title" itemprop="name headline">{{ include.post.title | escape }}</h1>
+  {% else %}
+  <a class="p-name" itemprop="name headline" href="{{ post.url }}" title="{{ post.title }}"><h1 class="post-link">{{ include.post.title | escape }}</h1></a>
+  {% endif %}
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ include.post.date | date: site.date_format }}
+      </time>
+      
+      {% if include.post.repost %} |
+      <a href="{{ include.post.repost }}" class="repost" target="blank" title="Это репост моей публикации из другого источника"></a>     
+      {% endif %}
+      
+	  {% if include.post.tags %} | 
+	  {% for tag in include.post.tags %}
+		<a href="{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+	  {% endfor %}
+	  {% endif %}
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ include.post.content }}
+  </div>
+
+  {%- if include.discuss -%}
+  	<div id="comments">
+    	<script async src="https://comments.app/js/widget.js?2" data-comments-app-website="o1XkqNg6" data-limit="20" data-dislikes="1" data-page-id="{{ page.id }}"></script>
+    </div>
+  {% else %}  
+    <div class="post-links">
+  	    <a href="{{ post.url }}">Ссылка</a><span> • </span><a href="{{ post.url }}#comments">Комментировать</a>
+  	</div>
+  {%- endif -%}
+
+  <a class="u-url" href="{{ include.post.url | relative_url }}" hidden></a>
+</article>
