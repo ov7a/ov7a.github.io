@@ -15,6 +15,8 @@ paginate_path: "/mini_posts/page:num/"
 theme: minima
 date_format: "%d.%m.%Y"
 
+future: true
+
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
