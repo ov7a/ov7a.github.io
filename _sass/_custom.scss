@@ -54,6 +54,20 @@ summary.spoiler {
 	color: $theme-color;
 }
 
+@media print {
+	header.site-header {
+		display: none;
+	}
+
+	body {
+		display: block;
+	}
+
+	p {
+		break-inside: avoid;
+	}
+}
+
 @import "_tags";
 @import "_list";
 @import "_repost";
