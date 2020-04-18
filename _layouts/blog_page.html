@@ -1,0 +1,21 @@
+---
+layout: default
+title: Журнал
+---
+	{%include list_header.html
+		title=page.title
+		type="timeline"
+		prefix="/blog"
+	%}
+
+	{% assign blog_posts = site.posts | where: "hidden", true %}
+	{% if page.name == "index.html" %}
+		{% assign page_num = 1 %}
+	{% else %}
+		{% assign page_num = page.name | remove: "page" | remove: ".html" | plus: 0 %}
+	{% endif %}
+
+	{% include blog_paginator.html
+		posts = blog_posts
+		page_num = page_num
+	%}

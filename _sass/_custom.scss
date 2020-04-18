@@ -49,6 +49,11 @@ iframe {
     margin-bottom: 0.5 * $spacing-unit; 
 }
 
+.pagination {
+	margin-top: $spacing-unit;
+	text-align: center;
+}
+
 summary.spoiler {
 	text-decoration: underline dotted;
 	color: $theme-color;

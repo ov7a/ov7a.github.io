@@ -11,6 +11,12 @@ kramdown:
 
 paginate: 10
 paginate_path: "/mini_posts/page:num/"
+paginate_first_page: "/mini_posts"
+
+blog:
+  paginate: 5
+  paginate_path: "/blog/page:num/"
+  paginate_first_page: "/blog"
 
 theme: minima
 date_format: "%d.%m.%Y"
