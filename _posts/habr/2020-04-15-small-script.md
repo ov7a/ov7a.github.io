@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [python, telegram]
+tags: [habr, python, telegram]
 title: Как убить на мелкий скрипт кучу времени или история одного пулл-реквеста 
 hidden: true
 repost: https://habr.com/ru/post/497628/
