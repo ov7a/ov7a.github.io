@@ -71,6 +71,10 @@ summary.spoiler {
 	p {
 		break-inside: avoid;
 	}
+	
+	pre {
+		white-space: pre-wrap;
+	}	
 }
 
 @import "_tags";
