@@ -9,10 +9,11 @@ title: Журнал
 	%}
 
 	{% assign blog_posts = site.posts | where: "hidden", true %}
-	{% if page.name == "index.html" %}
-		{% assign page_num = 1 %}
+	{% if page.path contains "page" %}
+		{% assign path_parts = page.path | split: "/" %}
+		{% assign page_num = path_parts[-2] | remove: "page" | plus: 0 %}
 	{% else %}
-		{% assign page_num = page.name | remove: "page" | remove: ".html" | plus: 0 %}
+		{% assign page_num = 1 %}
 	{% endif %}
 
 	{% include blog_paginator.html
