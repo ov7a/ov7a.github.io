@@ -32,8 +32,14 @@ header_pages:
   - blog/index.html
   - interactive/index.html
   - mini_posts/index.html
+  - gags/index.html
   - index.html
 
 tag_page:
-  - /blog/tags.html  
-    
+  - /blog/tags.html
+
+defaults:
+  - scope:
+      path: "assets/gags"
+    values:
+      image: true

@@ -1,0 +1,147 @@
+.gallery {
+	display: block;
+}
+
+.preview {
+	float: left;
+	width: 30%;
+	height: 200px; /*this makes me sad*/
+	padding: 1%;
+	background: $background-color;
+}
+
+
+img.thumbnail {
+	object-fit: cover;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+
+.view {
+	position: fixed;
+	top: -100%;
+	width: 100%;
+	background: rgba(0,0,0,.7);
+	opacity: 0;
+	overflow: hidden;
+
+	&:target {
+		opacity: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+.view img, div.notes {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-height: 0%;
+	max-width: 0%;
+}
+
+.view:target img {
+	max-height: 95%;
+	max-width: 95%;
+	border: 3px solid white;
+	box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+	box-sizing: border-box;
+}
+
+.view:target div.notes {
+	top: unset;
+	bottom: 1%;
+	width: max-content;
+	max-width: $content-width;
+	max-height: unset;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 1px 1em;
+	color: $background-color;
+	background: rgba(0,0,0,.6);
+}
+
+div.notes > p {
+	margin-bottom: 0;
+}
+
+div.notes a {
+	&:hover {
+		color: $background-color;
+	}
+}
+
+a.control {
+	display: block;
+	position: absolute;
+	outline: none;
+
+	font-size: 500%;
+	color: $background-color;
+	font-family: $font-font-awesome;
+	opacity: 0.6;
+
+	&:hover {
+		color: $background-color;
+		text-decoration: none;
+		opacity: 0.8;
+	}
+
+	&::after {
+		position: absolute;
+	}
+}
+
+a.close {
+	@extend a.control;
+	width: 50px;
+	height: 50px;
+	top: -100%;
+	right: 0;
+}
+
+a.prev, a.next {
+	@extend a.control;
+	width: 49%;
+	height: 100%;
+	right: -100%;
+}
+
+.view:target a.close {
+	top: 0;
+}
+.view:target a.prev {
+	left: 0;
+}
+.view:target a.next {
+	right: 0;
+}
+
+a.close::after {
+	font-size: 50%;
+	content: "\f057";
+	right: 10px;
+}
+
+a.prev::after {
+	content: "\f053";
+	left: 1%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+a.next::after {
+	content: "\f054";
+	right: 1%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
