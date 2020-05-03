@@ -1,0 +1,46 @@
+.badge {
+  display: inline-block;
+  background: rgba($theme-color, 0.15);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  color: $theme-color;
+  font-size: 90%;
+  &:hover {
+    text-decoration: none;
+    background: $theme-color;
+  }
+}
+
+.post-tag {
+  @extend .badge;
+  &:before {
+    content: "\f02b";
+    font-family: $font-font-awesome;
+    padding-right: .5em;
+  }
+}
+
+.repost {
+  @extend .badge;
+  &:before {
+    content: "\f0c1";
+    font-family: $font-font-awesome;
+  }
+}
+
+.list {
+  @extend .badge;
+  &:before {
+    content: "\f03a";
+    font-family: $font-font-awesome;
+  }
+}
+
+.timeline {
+  @extend .badge;
+  &:before {
+    content: "\f0c9";
+    font-family: $font-font-awesome;
+  }
+}
+
