@@ -20,6 +20,17 @@ summary.spoiler {
 	color: $theme-color;
 }
 
+kbd {
+	border: 2px;
+	border-bottom: 3px;
+	border-radius: 5px;
+	border-style: outset;
+	background-color: #F0F0F0;
+	padding: 2px;
+	font-size: 75%;
+	white-space: nowrap;
+}
+
 @import "_badges";
 @import "_spacing";
 @import "_print";
