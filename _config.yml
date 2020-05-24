@@ -32,7 +32,7 @@ header_pages:
   - blog/index.html
   - interactive/index.html
   - mini_posts/index.html
-  - gags/index.html
+  - gags/index.md
   - index.html
 
 tag_page:
@@ -43,3 +43,5 @@ defaults:
       path: "assets/gags"
     values:
       image: true
+      gag: true
+

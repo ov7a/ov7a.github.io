@@ -1,24 +1,26 @@
 ---
 layout: default
-title: Смешнявки
 ---
-{% assign gags = site.static_files | where: "image", true | sort: 'name' | reverse %}
+{{ content }}
+
+{% assign items = site.static_files | where: "image", true | where: page.collection, true | sort: 'name' | reverse %}
+{% assign notes = site.data[page.notes] %}
 <div class="gallery">
-{% for image in gags %}
+{% for image in items %}
 	{% assign anchor = image.name | handleize %}
 	{% assign src = image.path | relative_url %}
 	{% if forloop.first %}
 		{% assign prev_anchor = "" %}
 	{% else %}
 		{% assign prev = forloop.index0 | minus: 1 %}
-		{% assign prev_anchor = gags[prev].name | handleize %}
+		{% assign prev_anchor = items[prev].name | handleize %}
 	{% endif %}
 
 	{% if forloop.index.last %}
 		{% assign next_anchor = "" %}
 	{% else %}
 		{% assign next = forloop.index0 | plus: 1 %}
-		{% assign next_anchor = gags[next].name | handleize %}
+		{% assign next_anchor = items[next].name | handleize %}
 	{% endif %}
 
 
@@ -32,11 +34,12 @@ title: Смешнявки
 		<a class="prev" href="#{{ prev_anchor }}"></a>
 		<a class="next" href="#{{ next_anchor }}"></a>
 		<a class="close" href="##"></a>
-		{% if site.data.gags_notes[anchor] %}
+		{% if notes[anchor] %}
 			<div class="notes">
-				{{ site.data.gags_notes[anchor] | markdownify }}
+				{{ notes[anchor] | markdownify }}
 			</div>
 		{% endif %}
 	</div>
 {% endfor %}
 </div>
+
