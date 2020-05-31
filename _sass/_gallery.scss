@@ -101,7 +101,7 @@ a.control {
 }
 
 a.close {
-	@extend a.control;
+	@extend a, .control;
 	width: 50px;
 	height: 50px;
 	top: -100%;
@@ -109,7 +109,7 @@ a.close {
 }
 
 a.prev, a.next {
-	@extend a.control;
+	@extend a, .control;
 	width: 49%;
 	height: 100%;
 	right: -100%;
