@@ -36,7 +36,8 @@ layout: default
 		<a class="close" href="##"></a>
 		{% if notes[anchor] %}
 			<div class="notes">
-				{{ notes[anchor] | markdownify }}
+				{% assign note = notes[anchor] %}
+				{% include {{ page.notes }}.html note=note %}
 			</div>
 		{% endif %}
 	</div>

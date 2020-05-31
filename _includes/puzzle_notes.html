@@ -1,0 +1,18 @@
+{% assign note = include.note %}
+
+{{ note.intro | markdownify }}
+
+{% if note.hint %}
+	{% capture spoiler_content %}
+		{{ note.hint | markdownify }}
+	{% endcapture %}
+	{% include spoiler.html title="Подсказка" content=spoiler_content %}
+{% endif %}
+
+{% if note.answer %}
+	{% capture spoiler_content %}
+		{{ note.answer | markdownify }}
+	{% endcapture %}
+	{% include spoiler.html title="Ответ" content=spoiler_content %}
+{% endif %}
+
