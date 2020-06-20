@@ -27,6 +27,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-commonmark-ghpages
+  - jekyll-feed
 
 header_pages:
   - blog/index.html
