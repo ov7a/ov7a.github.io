@@ -5,9 +5,8 @@ highlighter: rouge
 gist:
   noscript: false
 markdown: CommonMarkGhPages
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+commonmark:
+  extensions: ["strikethrough", "autolink", "table"]
 
 paginate: 10
 paginate_path: "/mini_posts/page:num/"
