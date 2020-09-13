@@ -1,12 +1,12 @@
-{% assign items = site.static_files | where: "image", true | where: page.collection, true | sort: 'name' %}
-{% if page.reverse_order %}
+{% assign items = site.static_files | where: "image", true | where: include.collection, true | sort: 'name' %}
+{% if include.reverse_order %}
 	{% assign items = items | reverse %}
 {% endif %}
-{% assign notes = site.data[page.notes] %}
-{% if page.note_layout %}
-	{% assign note_layout = page.note_layout %}
+{% assign notes = site.data[include.notes] %}
+{% if include.note_layout %}
+	{% assign note_layout = include.note_layout %}
 {% else %}
-	{% assign note_layout = page.notes %}
+	{% assign note_layout = include.notes %}
 {% endif %}
 <div class="gallery">
 {% for image in items %}

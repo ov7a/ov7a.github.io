@@ -46,8 +46,14 @@ defaults:
       image: true
       gag: true
   - scope:
-      path: "assets/puzzles"
+      path: "assets/puzzles/game01"
     values:
       image: true
-      puzzle: true
+      puzzle_game01: true
+  - scope:
+      path: "assets/puzzles/game02"
+    values:
+      image: true
+      puzzle_game02: true
+
 

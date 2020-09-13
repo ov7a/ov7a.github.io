@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% assign notes="puzzle_notes_game" | append: page.number %}
+{% assign collection="puzzle_game" | append: page.number %}
+
+{{ content }}
+
+{% include gallery.html
+	note_layout="puzzle_notes"
+	notes=notes
+	collection=collection
+%}
+
