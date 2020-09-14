@@ -33,7 +33,7 @@ header_pages:
   - interactive/index.html
   - mini_posts/index.html
   - puzzles/index.md
-  - gags/index.md
+  - gags/index.html
   - index.html
 
 tag_page:
