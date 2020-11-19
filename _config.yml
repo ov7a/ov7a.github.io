@@ -65,4 +65,9 @@ defaults:
     values:
       image: true
       puzzle_game03: true
+  - scope:
+      path: "assets/puzzles/game04"
+    values:
+      image: true
+      puzzle_game04: true
 
