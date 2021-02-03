@@ -4,3 +4,8 @@
 [submodule "old_js_stuff"]
 	path = old_js_stuff
 	url = https://github.com/ov7a/old_js_stuff
+[submodule "moving_dom"]
+	path = moving_dom
+	url = https://github.com/ov7a/moving_dom
+	branch = built
+
