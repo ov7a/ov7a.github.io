@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Анатомия GNU/Linux
-tags: [linux]
+tags: [linux, утюг]
 ---
 В каждом утюге эта статья была, пусть будет и в моем.
 
