@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Конвертация pdf ⟷ png
-tags: [linux, cli]
+tags: [linux, cli, convert]
 ---
 В продолжение темы конвертеров.
 ```bash

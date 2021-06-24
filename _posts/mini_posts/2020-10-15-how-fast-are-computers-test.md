@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Насколько быстро комп делает "типовые" операции?
+tags: [hardware, fun]
 ---
 Занимательный тест:
 [https://computers-are-fast.github.io](https://computers-are-fast.github.io)

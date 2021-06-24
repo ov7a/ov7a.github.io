@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [видео]
+tags: [видео, fun]
 title: Расширенные возможности команды ping
 hidden: true
 repost: https://youtube.com/watch?v=2N9f0MbVha0
