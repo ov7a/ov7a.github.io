@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Чек-листы для кода и архитектуры микросервисов
-tags: [bestpractices]
+tags: [bestpractices, архитектура]
 ---
 [https://kislayverma.com/programming/code-review-checklist-for-distributed-systems/](https://kislayverma.com/programming/code-review-checklist-for-distributed-systems/)
 [https://kislayverma.com/programming/design-review-checklist-for-distributed-systems/](https://kislayverma.com/programming/design-review-checklist-for-distributed-systems/)
