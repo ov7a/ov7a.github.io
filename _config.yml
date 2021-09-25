@@ -75,3 +75,8 @@ defaults:
     values:
       image: true
       puzzle_game05: true
+
+exclude:
+  - moving_dom/src*
+  - moving_dom/Cargo*
+
