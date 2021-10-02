@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github pull-requests stats</title>
+    <script src="github_pr_stats.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <!-- source: https://codepo8.github.io/css-fork-on-github-ribbon/ -->
+    <style>
+        #forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#047700;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1>Pull requests close time stats</h1>
+
+    <p class="hint">How long will your pull request be reviewed? Get an estimate!</p>
+
+    <div class="repo">
+        <form id="repo" action="javascript:void(0)">
+            <p>
+                <span>Repository:</span>
+                <input type="text" id="repository_id" name="repo" placeholder="e.g. torvalds/linux"
+                       required pattern="\s*(?:https?://github.com/)?([^/\s]+/[^/\s]+)/?\s*"
+                       title="Please input valid github repo id or url"
+                />
+                <button type="submit" onclick="github_pr_stats.ru.ov7a.pull_requests.ui.calculateAndPresent()">
+                    calculate!
+                </button>
+            </p>
+        </form>
+    </div>
+
+    <div class="auth_block">
+        <details class="spoiler">
+            <summary class="spoiler">Authorization (optional, but recommended)</summary>
+
+            <form id="unauthorized" action="javascript:void(0)">
+                <p>
+                    <input type="text" id="auth_user" name="user" placeholder="your github name"
+                           required pattern=".*\S+.*" title="Please input your github user name"/>
+                    <input type="password" id="auth_token" placeholder="token"
+                           required pattern=".*\S+.*" title="Please input your personal token"/>
+                    <button type="submit" onclick="github_pr_stats.ru.ov7a.pull_requests.ui.storeAuthorization()">
+                        save
+                    </button>
+                </p>
+                <p>
+                    <a target="_blank" href="https://github.com/settings/tokens">Get your token here.</a>
+                    No additional scopes are needed.
+                </p>
+            </form>
+
+            <div id="authorized" hidden>
+                <p>
+                    <span>You are authorized</span>
+                    <button onclick="github_pr_stats.ru.ov7a.pull_requests.ui.resetAuthorization()">reset</button>
+                </p>
+            </div>
+
+            <div>
+                <details class="spoiler">
+                    <summary class="spoiler hint">What's the point of authorizing requests?</summary>
+                    <p>
+                        Github API
+                        <a target="_blank"
+                           href="https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting">rate-limits</a>
+                        unauthorized users to 60 requests per hour.
+                    </p>
+                    <p>Authorized users can make up to 5,000 requests per hour.</p>
+                    <p>Authorization allows using GraphQL API, which is much faster.</p>
+                </details>
+            </div>
+        </details>
+
+    </div>
+
+    <div class="output">
+        <p id="loading" hidden>
+            Fetching...
+            <progress id="fetch_progress" max="100" value="0"></progress>
+        </p>
+        <p id="results_no_data" class="results" hidden>
+            <span>There are no pull requests in this repository</span>
+        </p>
+        <p id="results_success" class="results" hidden>
+            <!-- will be generated -->
+        </p>
+        <p id="results_error" class="results" hidden>
+            <!-- will be generated -->
+        </p>
+    </div>
+</div>
+
+<span id="forkongithub"><a href="https://github.com/ov7a/github-pr-stats">Source code on GitHub</a></span>
+</body>
+</html>
