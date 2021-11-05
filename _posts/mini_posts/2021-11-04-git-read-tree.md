@@ -7,7 +7,7 @@ tags: [git]
 
 Мне это пригодилось для подключения [репозитория](https://github.com/ov7a/github-pr-stats) на сайт. Делал на основе п.2 [отсюда](https://stackoverflow.com/a/30386041/1003491):
 ```bash
-git remove add -f -t main --no-tags github-pr-stats git@github.com:ov7a/github-pr-stats.git
+git remote add -f -t main --no-tags github-pr-stats git@github.com:ov7a/github-pr-stats.git
 git read-tree --prefix=github-pr-stats -u github-pr-stats/main:build/distributions
 git commit
 ```
