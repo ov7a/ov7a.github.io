@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OWASP CheatSheet
-tags: [иб, owasp]
+tags: [иб, owasp, web]
 ---
 Случайно наткнулся [на сборник шпаргалок](https://cheatsheetseries.owasp.org) по OWASP.
 
