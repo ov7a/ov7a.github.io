@@ -64,13 +64,13 @@ img.thumbnail {
 	max-height: unset;
 	text-align: center;
 	box-sizing: border-box;
-	padding: 1px 1em;
 	color: $background-color;
 	background: rgba(0,0,0,.6);
 }
 
 div.notes > p {
 	margin-bottom: 0;
+	padding: 1px 1em;
 }
 
 div.notes a {
