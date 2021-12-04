@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ограничение запросов ElasticSearch со стороны клиента
-tags: [elasticsearch]
+tags: [elasticsearch, timeout]
 ---
 ElasticSearch — классная штука, но он не всемогущ. Некоторые запросы могут привести к OOM в кластере. Это может случиться по разным причинам, но в основном связано с дополнительными функциями: подсветка (создает мини-индекс в памяти), агрегации и т.п. — сам по себе поисковый запрос ничего не положит, если только настройки кластера не совсем убогие. Однако есть способы ограничить поисковый запрос [на стороне клиента](https://www.elastic.co/guide/en/elasticsearch/reference/master/search-search.html):
 1. `timeout` — по умолчанию его нет, но [это можно изменить](https://www.elastic.co/guide/en/elasticsearch/reference/master/search-your-data.html#search-timeout).
