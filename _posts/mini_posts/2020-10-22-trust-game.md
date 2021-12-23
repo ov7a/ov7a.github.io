@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Сборник просвещающих игр
-tags: [fun]
+tags: [fun, tutorial]
 ---
 Отличный сайт для изучения разных социальных и не очень проблем в игровом формате: [https://ncase.me/](https://ncase.me/).
 
