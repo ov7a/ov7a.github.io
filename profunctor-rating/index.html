@@ -9858,7 +9858,7 @@ var $author$project$View$githubLink = A2(
 				]),
 			_List_fromArray(
 				[
-					$elm$html$Html$text('#forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#047700;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:\"\";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}')
+					$elm$html$Html$text('#forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:3.75px 30px;font-size:0.75rem;line-height:1.5rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#047700;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:\"\";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:150px;overflow:hidden;height:150px;z-index:9999;}#forkongithub a{width:150px;position:absolute;top:45px;right:-45px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:3px 3px 7.5px rgba(0,0,0,0.8);}}')
 				])),
 			A2(
 			$elm$html$Html$a,
@@ -15286,6 +15286,7 @@ var $author$project$View$style = {
 	inputColor: A3($mdgriffith$elm_ui$Element$rgb255, 44, 48, 53),
 	linkColor: A3($mdgriffith$elm_ui$Element$rgb255, 150, 150, 200),
 	loaderColor: '#EAEAEA',
+	maxInputWidth: 700,
 	maxWidth: 900,
 	padding: 10,
 	spacing: 10
@@ -20841,7 +20842,9 @@ var $author$project$View$mainBody = function (model) {
 				[
 					$mdgriffith$elm_ui$Element$centerX,
 					$mdgriffith$elm_ui$Element$spacing($author$project$View$style.spacing),
-					$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill)
+					$mdgriffith$elm_ui$Element$padding($author$project$View$style.padding),
+					$mdgriffith$elm_ui$Element$width(
+					A2($mdgriffith$elm_ui$Element$maximum, $author$project$View$style.maxInputWidth, $mdgriffith$elm_ui$Element$fill))
 				]),
 			_List_fromArray(
 				[
