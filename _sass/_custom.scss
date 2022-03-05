@@ -6,7 +6,7 @@ h1.post-list {
 }
 
 .list-type {
-  float: right;
+	float: right;
 }
 
 .list-header:after {
@@ -35,4 +35,5 @@ kbd {
 @import "_spacing";
 @import "_print";
 @import "_gallery";
+@import "_anchors";
 
