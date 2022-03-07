@@ -23,7 +23,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-  	{% if include.anchors %}
+	{% if include.anchors %}
 		{% include anchor_headings.html html=include.post.content anchorBody="#" anchorClass="anchor"%}
 	{% else %}
 		{{ include.post.content }}
