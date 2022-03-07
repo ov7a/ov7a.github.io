@@ -19143,6 +19143,8 @@ var $mdgriffith$elm_ui$Element$el = F2(
 					[child])));
 	});
 var $elm$html$Html$form = _VirtualDom_node('form');
+var $elm$html$Html$Attributes$hidden = $elm$html$Html$Attributes$boolProperty('hidden');
+var $elm$html$Html$input = _VirtualDom_node('input');
 var $mdgriffith$elm_ui$Internal$Model$StaticRootAndDynamic = F2(
 	function (a, b) {
 		return {$: 1, a: a, b: b};
@@ -19426,7 +19428,15 @@ var $author$project$View$formWrapper = function (elem) {
 								[$mdgriffith$elm_ui$Element$noStaticStyleSheet])
 						},
 						$author$project$View$defaultStyle,
-						elem)
+						elem),
+						A2(
+						$elm$html$Html$input,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$type_('submit'),
+								$elm$html$Html$Attributes$hidden(true)
+							]),
+						_List_Nil)
 					]))));
 };
 var $mdgriffith$elm_ui$Element$htmlAttribute = $mdgriffith$elm_ui$Internal$Model$Attr;
