@@ -6,6 +6,7 @@ gist:
   noscript: false
 markdown: CommonMarkGhPages
 commonmark:
+  options: ["SMART", "FOOTNOTES", "UNSAFE"]
   extensions: ["strikethrough", "autolink", "table"]
 
 paginate: 10
