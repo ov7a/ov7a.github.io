@@ -1,0 +1,96 @@
+body {
+	background-image: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url("background.png");
+	background-repeat: repeat;
+}
+
+div.main {
+	font-size: x-large;
+	display: block;
+	max-width: 33em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+ul {
+	list-style: inside;
+}
+
+span.li-content {
+	transition: all 200ms;
+	margin-left: -2em;
+	position: relative;
+	top: -0.5em;
+}
+
+span.li-content:hover {
+	font-weight: bold;
+	font-size: 1.5em;
+	top: -0.25em;
+}
+
+div.timeline li {
+	list-style-position: inside;
+	position: relative;
+	white-space: nowrap;
+}
+
+div.timeline li::marker {
+	color: blue;
+	font-size: 3em;
+}
+
+div.timeline li.empty {
+	list-style: none;
+}
+
+div.timeline li:before {
+	content: '\00a0';
+	border-left: 0.5em solid blue;
+	position: absolute;
+	left: 0.19em;
+	height: 100%;
+}
+
+
+div.timeline li:last-child:before {
+	height: 50%;
+}
+
+div.timeline li:first-child:before {
+	top: 50%;
+	height: 50%;
+}
+
+div.sources {
+	font-size: small;
+}
+
+/* Firefox specific */
+@supports (-moz-appearance:none) {
+	div.timeline li:before {
+		left: 0.6em;
+	}
+	span.li-content {
+		margin-left: -1.2em;
+	}
+}
+
+/* Safari specific */
+@media not all and (min-resolution:.001dpcm) { @media { 
+	div.timeline li:before {
+		left: 0.2em;
+	}
+	span.li-content {
+		margin-left: -1.2em;
+	}
+	
+	div.timeline li:last-child:before {
+		height: 0.5em;
+	}
+
+	div.timeline li:first-child:before {
+		top: 0.5em;
+		height: 1.5em;
+	}
+}}
+
