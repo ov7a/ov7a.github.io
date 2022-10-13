@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Недавние открытия из мира сортировок
-tags: [algorithms, sorting]
+tags: [algorithms, sorting, ai]
 ---
 Перед новым годом наткнулся на две интересные статьи про алгоритмы.
 
