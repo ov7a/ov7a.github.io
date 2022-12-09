@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [web, frontend]
+tags: [web, css, frontend]
 title: Впечатления от CSS, или как я галерею со смешнявками делал
 hidden: true
 ---
