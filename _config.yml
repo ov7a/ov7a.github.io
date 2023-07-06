@@ -28,6 +28,7 @@ plugins:
   - jekyll-paginate
   - jekyll-commonmark-ghpages
   - jekyll-feed
+  - jekyll-redirect-from
 
 header_pages:
   - blog/index.html
