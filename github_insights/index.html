@@ -19,7 +19,7 @@
     <div class="repo">
         <form id="repo" action="javascript:void(0)">
             <p>
-                <span>Repository:</span>
+                <label for="repository_id">Repository:</label>
                 <input type="text" id="repository_id" name="repo" placeholder="e.g. gradle/gradle"
                        required pattern="\s*(?:https?://github.com/)?([^/\s]+/[^/\s]+)/?\s*"
                        title="Please input valid github repo id or url"
@@ -32,6 +32,22 @@
                 <input id="item_type_issue" type="radio" name="item_type" value="issue"
                        onclick="github_insights.ru.ov7a.github.insights.ui.updateType()"/>
                 <label for="item_type_issue">Issues</label>
+            </p>
+            <p>
+                <label for="includes">Labels:</label>
+                <input type="text" id="includes" name="include" placeholder="comma-separated values"/>
+            </p>
+            <p>
+                <label for="states">State:</label>
+                <select name="state" id="states">
+                    <option value="ANY" selected>ANY</option>
+                    <option value="OPEN">OPEN</option>
+                    <option value="MERGED">MERGED</option>
+                    <option value="CLOSED">CLOSED</option>
+                </select>
+
+                <label for="limit">Limit:</label>
+                <input type="number" id="limit" name="limit" placeholder="-1"/>
             </p>
             <p>
                 <button type="submit" onclick="github_insights.ru.ov7a.github.insights.ui.calculateAndPresent()">

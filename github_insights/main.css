@@ -17,3 +17,7 @@ div.main {
 .output {
     margin-top: 5ex;
 }
+
+#limit {
+    max-width: 4em;
+}
