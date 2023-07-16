@@ -14,9 +14,7 @@
 <div class="main">
     <h1>GitHub issues and pull requests insights</h1>
 
-    <p id="help" class="hint">How long will your pull request be reviewed? Get an estimate!</p>
-
-    <div class="repo">
+    <div class="input">
         <form id="repo" action="javascript:void(0)">
             <p>
                 <label for="repository_id">Repository:</label>
@@ -34,7 +32,13 @@
                 <label for="item_type_issue">Issues</label>
             </p>
             <p>
-                <label for="includes">Labels:</label>
+                <input id="request_type_resolve" type="radio" name="request" value="resolve_time" checked/>
+                <label for="request_type_resolve">Estimate resolve time</label>
+                <input id="request_type_labels" type="radio" name="request" value="labels" checked/>
+                <label for="request_type_labels">Get stats for labels</label>
+            </p>
+            <p>
+                <label for="includes">Filter by labels:</label>
                 <input type="text" id="includes" name="include" placeholder="comma-separated values"/>
             </p>
             <p>
@@ -62,7 +66,7 @@
 
     <div class="auth_block">
         <details class="spoiler">
-            <summary class="spoiler">Authorization (optional, but recommended)</summary>
+            <summary class="spoiler">Authorization</summary>
 
             <form id="unauthorized" action="javascript:void(0)">
                 <p>
