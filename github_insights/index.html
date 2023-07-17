@@ -37,36 +37,32 @@
                 <input id="request_type_labels" type="radio" name="request" value="labels" checked/>
                 <label for="request_type_labels">Get stats for labels</label>
             </p>
-            <p>
-                <label for="includes">Filter by labels:</label>
-                <input type="text" id="includes" name="include" placeholder="comma-separated values"/>
-            </p>
-            <p>
-                <label for="states">State:</label>
-                <select name="state" id="states">
-                    <option value="ANY" selected>ANY</option>
-                    <option value="OPEN">OPEN</option>
-                    <option value="MERGED">MERGED</option>
-                    <option value="CLOSED">CLOSED</option>
-                </select>
+            <details class="spoiler">
+                <summary class="spoiler">Filters</summary>
+                <p>
+                    <label for="includes">Labels:</label>
+                    <input type="text" id="includes" name="include" placeholder="comma-separated values"/>
+                </p>
+                <p>
+                    <label for="states">State:</label>
+                    <select name="state" id="states">
+                        <option value="ANY" selected>ANY</option>
+                        <option value="OPEN">OPEN</option>
+                        <option value="MERGED">MERGED</option>
+                        <option value="CLOSED">CLOSED</option>
+                    </select>
 
-                <label for="limit">Limit:</label>
-                <input type="number" id="limit" name="limit" placeholder="-1"/>
-            </p>
-            <p>
-                <button type="submit" onclick="github_insights.ru.ov7a.github.insights.ui.calculateAndPresent()">
-                    calculate!
-                </button>
-                <button onclick="github_insights.ru.ov7a.github.insights.ui.copyShareLink()">
-                    copy link
-                </button>
-            </p>
+                    <label for="limit">Limit:</label>
+                    <input type="number" id="limit" name="limit" placeholder="-1"/>
+                </p>
+            </details>
         </form>
     </div>
 
+    <p></p>
     <div class="auth_block">
-        <details class="spoiler">
-            <summary class="spoiler">Authorization</summary>
+        <details class="spoiler" id="auth">
+            <summary class="spoiler" id="auth_hint">Authorization</summary>
 
             <form id="unauthorized" action="javascript:void(0)">
                 <p>
@@ -86,7 +82,6 @@
 
             <div id="authorized" hidden>
                 <p>
-                    <span>You are authorized</span>
                     <button onclick="github_insights.ru.ov7a.github.insights.ui.resetAuthorization()">reset</button>
                 </p>
             </div>
@@ -104,8 +99,27 @@
                     <p>Authorization allows using GraphQL API, which is much faster.</p>
                 </details>
             </div>
+            <div>
+                <details class="spoiler">
+                    <summary class="spoiler hint">Security</summary>
+                    <p>This application has no backend.</p>
+                    <p>Your token in stored unencrypted in cookies.</p>
+                    <p>This is unsecure, but your token should be for read-only access.</p>
+                    <p>Use this app at your own risk.</p>
+                </details>
+            </div>
         </details>
+    </div>
 
+    <div class="actions">
+        <p>
+            <button type="submit" onclick="github_insights.ru.ov7a.github.insights.ui.calculateAndPresent()">
+                calculate!
+            </button>
+            <button onclick="github_insights.ru.ov7a.github.insights.ui.copyShareLink()">
+                copy link
+            </button>
+        </p>
     </div>
 
     <div class="output">
