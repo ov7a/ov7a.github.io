@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Сборник cheatsheet
-tags: [docs]
+tags: [docs, tutorial]
 ---
 Канал с полурандомными читшитами на разные технические темы:
 
