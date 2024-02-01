@@ -14,7 +14,7 @@ repost: https://habr.com/ru/post/278169/
 
 Наша команда недавно закончила большой проект на Scala, сейчас делаем проект помельче на Kotlin, поэтому в спойлерах будет сравнение со Scala. Я буду считать, что Nullable в Kotlin - это эквивалент Option, хотя это совсем не так, но, скорее всего, большинство из тех, кто работал с Option, будут вместо него использовать Nullable.
 
-# 1. Пост-инкремент и преинкремент как выражения 
+## 1. Пост-инкремент и преинкремент как выражения 
 Цитирую вопрошавшего: "Фу, это ж баян, скучно". Столько копий сломано, миллион вопросов на собеседованиях C++... Если есть привычка, то можно было его оставить инструкцией (statement'ом). Справедливости ради, другие операторы, вроде +=, являются инструкциями. 
 <a href="https://habrahabr.ru/company/JetBrains/blog/277573/#comment_8784811">Цитирую</a> одного из разработчиков, @abreslav:
 <blockquote>
@@ -75,7 +75,7 @@ repost: https://habr.com/ru/post/278169/
 <br>
 {% include spoiler.html title="Чё там в Scala?" content="Ничего интересного, в Scala инкрементов нет. Компилятор скажет, что нет метода ++ для Int. Но если очень захотеть, его, конечно, можно определить." %}
 
-# 2. Одобренный способ
+## 2. Одобренный способ
 ```kotlin
     val foo: Int? = null
     val bar = foo!! + 5
@@ -102,7 +102,7 @@ Exception in thread "main" java.util.NoSuchElementException: None.get
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 3. Переопределение invoke()
+## 3. Переопределение invoke()
 Начнем с простого: что делает этот кусок кода и какой тип у a? 
 ```kotlin
     class A(){...}
@@ -234,7 +234,7 @@ class D, 10
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 4. lateinit
+## 4. lateinit
 
 ```kotlin
 class SlowPoke(){
@@ -294,7 +294,7 @@ null
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 5. Конструктор
+## 5. Конструктор
 
 ```kotlin
 class IAmInHurry(){
@@ -376,7 +376,7 @@ Initializing by default with null
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 6. Взаимодействие с Java
+## 6. Взаимодействие с Java
 Для выстрела тут простор достаточно большой. Очевидное решение - считать все, что пришло из Java, Nullable. Но тут есть долгая и поучительная <a href=" http://blog.jetbrains.com/kotlin/2015/04/upcoming-change-more-null-safety-for-java/">история</a>. Как я понял, она связана в основном с шаблонами, наследованием, и цепочкой Java-Kotlin-Java. И при таких сценариях приходилось делать много костылей, чтобы заработало. Поэтому решили от идеи "все Nullable" отказаться. 
 Но вроде как один из основных сценариев — свой код пишем на Kotlin, библиотели берем Java (как видится мне, простому крестьянину-кодеру). И при таком раскладе, лучше безопасность в большей части кода и явные костыли в небольшой части кода, которые видно, чем "красиво и удобно" + внезапные грабли в рантайме (или яма с кольями, как повезет). Но у разработчиков другое <a href="https://habrahabr.ru/company/JetBrains/blog/277573/#comment_8784731">мнение</a>:
 <blockquote>Одна из основных причин была в том, что писать на таком языке было неудобно, а читать его — неприятно. Повсюду вопросительные и восклицательные знаки, которые не очень-то помогают из-за того, что расставляются в основном, чтобы удовлетворить компилятор, а не чтобы корректно обработать случаи, когда выражение вычисляется в null. Особенно больно в случае дженериков: например, Map<String?, String?>?.
@@ -446,7 +446,7 @@ kotlinprintString(j2.get())
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 7. infix нотация и лямбды
+## 7. infix нотация и лямбды
 Сделаем цепочку из методов и вызовем ее:
 
 ```kotlin
@@ -606,7 +606,7 @@ Exception Details:
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 8. Перегрузка методов и it
+## 8. Перегрузка методов и it
 Это, скорее, метод подгадить другим. Представьте, что вы пишете библиотеку, и в ней есть функция
 ```kotlin
 fun applier(x: String, func: (String) -> Unit){
@@ -662,7 +662,7 @@ object Its extends App{
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 9. Почему не стоит думать о Nullable как об Option
+## 9. Почему не стоит думать о Nullable как об Option
 
 Пусть у нас есть обертка для кэша:
 ```kotlin
@@ -695,8 +695,10 @@ baz is not in cache!
 ```
 {% endcapture %}
 {% include spoiler.html title="Результат довольно предсказуем" content=spoiler_content %}
-<br>
+
+
 Но если мы вдруг захотим к кэше хранить Nullable...
+
 ```kotlin
     val cache = Cache<String?>()
     cache.put("foo", "bar")
@@ -713,6 +715,7 @@ baz is not in cache!
     cache.put("IAmNull", null)
     getter("IAmNull")
 ```
+
 {% capture spoiler_content %}
 ```
 Got foo from cache: bar
@@ -764,7 +767,7 @@ Got IAmNull from cache: null
 {% endcapture %}
 {% include spoiler.html title="Чё там в Scala?" content=spoiler_content %}
 
-# 10. Объявление методов
+## 10. Объявление методов
 Бонус для тех, кто раньше писал на Scala. Спонсор данного пункта - @lgorSL.
 <a href="https://habrahabr.ru/post/277479/#comment_8779645">Цитирую:</a>
 <blockquote>
@@ -791,20 +794,20 @@ fun test3() = {println("surprise!")}
 
 Из-за этих граблей переход со скалы на котлин оказался немного болезненным — иногда "по привычке" в объявлении какого-нибудь метода пишу знак равенства, а потом приходится искать ошибки.</blockquote>
 
-# Заключение
+## Заключение
 На этом список наверняка не исчерпывается, поэтому делитесь в комментариях, как вы шли дорогой приключений, но потом что-то пошло не так... 
 У языка много положительных черт, о которых вы можете прочитать на <a href="http://kotlinlang.org/">официальном сайте</a>, в <a href="https://habrahabr.ru/post/277479/">статьях</a> <a href="https://habrahabr.ru/post/268463/">на</a> <a href="https://habrahabr.ru/post/274997/">хабре</a> и еще много где. Но лично я не согласен с некоторыми архитектурными решениями (классы final by default, java interop) и иногда чувствуется, что языку нехватает единообразия, консистентности. Кроме примера с `lateinit` Int приведу еще два. Внутри блоков `let` используем `it`, внутри `with` - `this`, а внутри `run`, <a href="http://beust.com/weblog/2015/10/30/exploring-the-kotlin-standard-library/">который является комбинацией `let` и `this`</a> что надо использовать? А у класса `String!` можно вызвать методы `isBlank()`, `isNotBlank()`, `isNullOrBlank()`, а "дополняющего" метода вроде <code>isNotNullOrBlank</code> нет:( После Scala нехватает некоторых вещей - `Option`, `Either`, matching, каррирования. Но в целом язык оставляет приятное впечатление, надеюсь, что он продолжит достойно развиваться.
 
 P.S. Хабровская подсветка Kotlin хромает, надеюсь, что администрация @habrahabr это когда-нибудь поправит...
 
-# UPD: Выстрелы от комментаторов (буду обновлять)
+### UPD: Выстрелы от комментаторов (буду обновлять)
 <a href="https://habrahabr.ru/post/278169/#comment_8786835">Неочевидный приоритет оператора elvis</a>. Автор -  @senia.
 
-# UPD2 
+### UPD2 
 Обратите еще внимание на статью <a href="https://habrahabr.ru/post/308312/">Kotlin: без Best Practices и жизнь не та</a>.
 В <a href="https://habrahabr.ru/post/308312/#comment_9766292">комментариях</a> там есть еще один шикарный выстрел от @Artem_zin: возможность переопределить `get()` у `val` и возвращать значения динамически.
 
-# UPD3
+### UPD3
 Еще некоторые новички могут подумать, что операторы <code>and</code> и <code>or</code> для булевых переменных - это такой сахар для "нечитаемых" <code>&&</code> и <code>||</code>. Однако это не так: хоть результат вычислений будет тем же, но "старые" операторы вычисляются лениво. Поэтому если вы вдруг напишете так:
 ```kotlin
 if ((i >= 3) and (someArray[i-3] > 0)){
