@@ -321,3 +321,9 @@ assertThat(collection, not(anyOf(items.map { hasItem(it) })))
 * А какая библиотека больше всего нравится вам?
 * Какой библиотекой пользуетесь?
 
+## UPD
+
+Статья удостоилась [репоста](https://software-testing.ru/library/testing/testing-automation/3402-kotlin).
+
+Разработчик Kotest пофиксил проблему со сложными структурами и даже сделал [пулл-реквест](https://github.com/ov7a/kotlin-asserts-comparison/pull/1) в мой репозиторий с тестами. Обновил статью.
+

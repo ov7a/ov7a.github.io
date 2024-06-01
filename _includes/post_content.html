@@ -30,15 +30,11 @@
 	{% endif %}
   </div>
 
-  {%- if include.discuss -%}
-  	<div id="comments">
-    	<script async src="https://comments.app/js/widget.js?2" data-comments-app-website="o1XkqNg6" data-limit="20" data-dislikes="1" data-page-id="{{ page.id }}"></script>
-    </div>
-  {% else %}
+  {%- unless include.discuss -%}
     <div class="post-links">
-  	    <a href="{{ post.url }}">Ссылка</a><span> • </span><a href="{{ post.url }}#comments">Комментировать</a>
+  	    <a href="{{ post.url }}">Ссылка</a>
   	</div>
-  {%- endif -%}
+  {%- endunless -%}
 
   <a class="u-url" href="{{ include.post.url | relative_url }}" hidden></a>
 </article>
