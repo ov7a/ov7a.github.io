@@ -29,12 +29,31 @@
 		{{ include.post.content }}
 	{% endif %}
   </div>
-
-  {%- unless include.discuss -%}
+  
+  {%- if include.post.comments_url -%}
+    {% assign comments_url = include.post.comments_url %}
+  {%- elsif include.post.tg_id -%}
+    {% assign comments_url = "tg://resolve?domain=minutkaprosvescheniya&post=" | append: include.post.tg_id | append: "&comment=1" %}
+  {%- elsif include.post.repost and include.post.repost contains "https://habr.com" -%}
+    {% assign comments_url = include.post.repost | append: "comments/" %}
+  {%- endif -%}	
+  
+  {%- if include.discuss -%}
+    {%- if comments_url -%}
+      <div id="comments">
+        <a href="{{ comments_url }}">Комментарии</a>
+        {%- if include.post.tg_id -%}  
+          <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="minutkaprosvescheniya/{{ include.post.tg_id }}" data-comments-limit="20"></script>
+        {%- endif -%}  
+      </div>
+    {%- endif -%} 
+  {% else %}
     <div class="post-links">
-  	    <a href="{{ post.url }}">Ссылка</a>
-  	</div>
-  {%- endunless -%}
-
-  <a class="u-url" href="{{ include.post.url | relative_url }}" hidden></a>
+      <a href="{{ post.url }}">Ссылка</a>
+      {%- if comments_url -%}
+        <span> • </span><a href="{{ comments_url }}">Комментировать</a>
+      {%- endif -%}  
+    </div>	
+  {%- endif -%}
+  {% assign comments_url = false %}
 </article>
