@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OffsetDateTime и Hibernate
-tags: [бд, sql, java]
+tags: [бд, sql, java, time]
 ---
 При работе с датами Hibernate стоит быть аккуратным: он все типы конвертирует в java.sql.Timestamp, который по смыслу [идентичен](/2020/08/13/java-dates.html) java.time.Instant. Поэтому информация о временной зоне будет потеряна: при чтении из базы в какой-нибудь OffsetDateTime будет [подставлена системная зона](https://github.com/hibernate/hibernate-orm/blob/main/hibernate-core/src/main/java/org/hibernate/type/descriptor/java/OffsetDateTimeJavaDescriptor.java). Так что проще сразу маппить на Instant во избежание недоразумений. Матерые Java-чемпионы так и [говорят](https://vladmihalcea.com/date-timestamp-jpa-hibernate/), что OffsetDateTime и ZonedDateTime для JPA не очень полезны. И вообще, можно [стрельнуть](https://stackoverflow.com/questions/61656592/offsetdatetime-persisted-by-jpa-differs-by-2-hours) себе в ногу с ними.
 

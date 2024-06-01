@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Типы дат java.time
-tags: [java]
+tags: [java, time]
 ---
 С java.time жить можно, хотя Joda Time у автора получился поудобнее. Памятка про отличия различных типов.
 TLDR: `LocalDateTime` с большой вероятностью бэкэндщику не нужен, а `OffsetDateTime` покроет большинство бытовых кейсов.

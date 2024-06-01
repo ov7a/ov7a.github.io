@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Преобразование unix-timestamp в человеческую дату
-tags: [linux, cli]
+tags: [linux, cli, time]
 ---
 Годами я использовал онлайн сервисы типа [epochconverter](https://www.epochconverter.com/), чтобы из временной метки 1590735600 получить "Friday, May 29, 2020 10:00:00 AM GMT+03:00". На днях узнал, что это можно сделать и в консоли:
 ```
