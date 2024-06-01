@@ -2,6 +2,7 @@
 layout: post
 title: Frame pointer
 tags: [c, testing]
+tg_id: 493
 ---
 Интересная [статья](https://www.brendangregg.com/blog/2024-03-17/the-return-of-the-frame-pointers.html) про frame pointer — указатель на верхушку стека вызовов. Недавно как раз обсуждал с коллегами, надо ли или не надо его использовать (в итоге положились на то, что в `gcc` по умолчанию он не добавляется), и нате. 
 

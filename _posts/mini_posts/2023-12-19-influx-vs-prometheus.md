@@ -2,6 +2,7 @@
 layout: post
 title: Отличия Prometheus от InfluxDB
 tags: [мониторинг]
+tg_id: 467
 ---
 Prometheus — де-факто стандарт для всяких куберов и микросервисов. До него я работал с TICK-стеком, в частности с InfluxDB. 
 

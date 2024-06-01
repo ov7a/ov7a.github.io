@@ -2,6 +2,7 @@
 layout: post
 title: Работа с эффектами в Scala
 tags: [scala]
+tg_id: 324
 ---
 Хороший [видос](https://youtu.be/jRVvj_2yWkE) про этапы развития Scala с точки зрения работы с эффектами (с небольшим предисловием про Haskell) — better Java, акторы, Future, Monix, Scalaz-stream, Cats, FS2, Cats Effect, ZIO.
 

@@ -2,6 +2,7 @@
 layout: post
 title: Тьюринг-полнота почти везде
 tags: [fun, иб, algorithms]
+tg_id: 375
 ---
 Хорошая [статья-сборник](https://www.gwern.net/Turing-complete) про то, какие системы неожиданно или не очень являются Тьюринг-полными.
 

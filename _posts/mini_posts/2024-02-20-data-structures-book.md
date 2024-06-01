@@ -2,6 +2,7 @@
 layout: post
 title: "Data Structures for Data-Intensive Applications: Tradeoffs and Design Guidelines"
 tags: [algorithms, бд, tutorial]
+tg_id: 485
 ---
 [Одна из лучших книжек](https://cs-people.bu.edu/mathan/publications/fnt23-athanassoulis.pdf) по алгоритмам, которые я когда-то либо читал.
 Избранные моменты:

@@ -2,6 +2,7 @@
 layout: post
 title: Асинхронная коммуникация вместо встреч
 tags: [teamlead, мысли]
+tg_id: 481
 ---
 Довольно неплохая [статья](https://www.infoq.com/articles/asynchronous-collaboration-software-teams/) про организацию асинхронного общения.
 

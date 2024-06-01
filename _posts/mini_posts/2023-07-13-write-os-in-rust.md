@@ -2,6 +2,7 @@
 layout: post
 title: Операционная система на Rust
 tags: [os, rust, c, memory]
+tg_id: 420
 ---
 Не очень новый (2018), но занятный [доклад](https://www.youtube.com/watch?v=HgtRAbE1nBM) про то, стоит ли писать ОС на Rust.
 

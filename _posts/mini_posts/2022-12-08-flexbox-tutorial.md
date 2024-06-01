@@ -2,6 +2,7 @@
 layout: post
 title: Пофлексить
 tags: [css, tutorial, frontend]
+tg_id: 358
 ---
 Интерактивный [туториал](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/) по основам FlexBox.
 

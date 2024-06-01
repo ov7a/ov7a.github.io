@@ -2,6 +2,7 @@
 layout: post
 title: Улучшение процессов в компании
 tags: [teamlead]
+tg_id: 487
 ---
 Занятное [исследование](https://web.mit.edu/nelsonr/www/Repenning=Sterman_CMR_su01_.pdf) про улучшение процессов. Оно довольно старое (2001 год), но актуально до сих пор.
 

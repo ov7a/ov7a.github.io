@@ -2,6 +2,7 @@
 layout: post
 title: Mercurial мертв?
 tags: [mercurial, git]
+tg_id: 259
 ---
 С одной стороны, недавно был [релиз](https://www.mercurial-scm.org/wiki/Release6.0), и он еще используется в [Mozilla](https://hg.mozilla.org/), [nginx](https://hg.nginx.org/). Но, например, Facebook [планирует отказываться от него](https://github.com/facebookexperimental/eden).
 

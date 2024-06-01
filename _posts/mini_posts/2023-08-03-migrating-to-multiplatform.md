@@ -2,6 +2,7 @@
 layout: post
 title: Миграция на Kotlin multiplatform
 tags: [kotlin, github]
+tg_id: 426
 ---
 Мигрировал [проект](/2023/07/25/github-insights.html) про статистику пулл-реквестов GitHub с Kotlin/JS на multiplatform. На удивление, сама миграция прошла довольно гладко — немного пошаманить с билд-скриптом, [переименовать папочки](https://github.com/ov7a/github-insights/commit/3be8e30eb8aca3ad0f75881d9ae9376399955841) и готово.
 

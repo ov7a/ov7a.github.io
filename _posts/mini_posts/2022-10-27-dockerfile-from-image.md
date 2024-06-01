@@ -2,6 +2,7 @@
 layout: post
 title: Получение Dockerfile по образу
 tags: [docker]
+tg_id: 346
 ---
 Если кто-то один Dockerfile сломал, а другой потерял, то можно его почти полностью [восстановить](https://hub.docker.com/r/alpine/dfimage) из готового образа:
 ```

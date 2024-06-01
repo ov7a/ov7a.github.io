@@ -2,6 +2,7 @@
 layout: post
 title: Псевдонимы для типов и value-классы
 tags: [фп, types, kotlin, scala]
+tg_id: 299
 ---
 Почти бесплатно повысить читаемость кода можно за счет псевдонимов типов (type aliases). Например, можно заменить в бизнес-логике безликий `UUID` на `UserId`. Есть это почти во всех языках: `typedef` или даже `#define` в С, `using` в C++ и C#, `type alias` в Kotlin, `type` в Scala/Haskell и даже в [питоне](https://stackoverflow.com/questions/33045222/how-do-you-alias-a-type-in-python), но не в Java. Можно еще использовать локально: импортировать тип с другим именем. Но у псевдонимов есть банальный недостаток: ничто не помешает в `UserId` запихать другой `UUID`, например `ObjectId`. 
 

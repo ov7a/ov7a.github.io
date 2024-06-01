@@ -2,6 +2,7 @@
 layout: post
 title: Как запихнуть данные в Prometheus
 tags: [мониторинг]
+tg_id: 419
 ---
 Классический способ: приложение выставляет URL `/metrics`, prometheus забирает оттуда их в [простом текстовом формате](https://github.com/prometheus/docs/blob/main/content/docs/instrumenting/exposition_formats.md#text-format-example).
 

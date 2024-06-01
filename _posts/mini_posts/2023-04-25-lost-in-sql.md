@@ -2,6 +2,7 @@
 layout: post
 title: Игра про SQL
 tags: [sql, tutorial, fun, утюг]
+tg_id: 398
 ---
 [Сабж](https://lost-at-sql.therobinlord.com). 
 

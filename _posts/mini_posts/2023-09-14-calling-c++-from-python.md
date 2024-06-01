@@ -2,6 +2,7 @@
 layout: post
 title: Вызов C++ из питона
 tags: [python, c]
+tg_id: 436
 ---
 Оказывается, кроме [ctypes](https://docs.python.org/3/library/ctypes.html) и [Cython](https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html) с тех пор как я смотрел появился еще один способ, [pybind11](https://pybind11.readthedocs.io/en/stable/basics.html#creating-bindings-for-a-simple-function) (если не считать всякие граали).
 

@@ -2,6 +2,7 @@
 layout: post
 title: Проблемы GraalVM
 tags: [graalvm, scala]
+tg_id: 424
 ---
 Подкинули [доклад](https://www.youtube.com/watch?v=gmfM_pAbBdU) про использование GraalVM в Akka-проекте.
 

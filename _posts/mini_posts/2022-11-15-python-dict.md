@@ -2,6 +2,7 @@
 layout: post
 title: Порядок ключей в словаре в питоне
 tags: [python, algorithms]
+tg_id: 351
 ---
 В Python 3.6 [была оптимизирована](https://docs.python.org/3/whatsnew/3.6.html#new-dict-implementation) память, используемая `dict`. 
 Раньше элементы [хранились в массиве](https://mail.python.org/pipermail/python-dev/2012-December/123028.html), каждый элемент — структура из хэша и ссылок на ключ и на значение. Поскольку используется открытая адресация, то многие ячейки были пусты и прорва памяти тратилась зря.

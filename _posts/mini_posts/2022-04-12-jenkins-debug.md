@@ -2,6 +2,7 @@
 layout: post
 title: Отладка Jenkins пайплайна
 tags: [jenkins, devops]
+tg_id: 287
 ---
 Чтобы быстрее отладить/доработать скрипт пайплана в jenkins, можно использовать:
 - Генератор кода http://${jenkinsHost}/pipeline-syntax, в котором можно накликать один из шагов из плагинов.

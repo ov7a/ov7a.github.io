@@ -2,6 +2,7 @@
 layout: post
 title: Запуск нескольких целей в Maven
 tags: [maven, devops]
+tg_id: 286
 ---
 С помощью `defaultGoal` и профиля можно запускать несколько фаз или целей:
 ```xml

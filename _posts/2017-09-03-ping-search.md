@@ -5,7 +5,6 @@ title: Расширенные возможности команды ping
 hidden: true
 repost: https://youtube.com/watch?v=2N9f0MbVha0
 ---
-
 Прислал кто-то смешнявку:
 
 {% include youtube_video.html video_id="sj4CbcBDVA0" %}

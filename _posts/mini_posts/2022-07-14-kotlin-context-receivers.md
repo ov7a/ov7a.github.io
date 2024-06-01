@@ -2,6 +2,7 @@
 layout: post
 title: Context receivers
 tags: [kotlin]
+tg_id: 317
 ---
 В рабочем проекте попробовал добавленные недавно [context receivers](https://github.com/Kotlin/KEEP/blob/master/proposals/context-receivers.md). Вкратце, это очередной сахар, который позволяет требовать, чтобы функция вызывалась в контексте, содержащем какой-то класс как `this`:
 ```kotlin

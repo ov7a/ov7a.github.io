@@ -2,6 +2,7 @@
 layout: post
 title: ОС и Paint в браузере
 tags: [os, wasm, graphics, fun, util]
+tg_id: 507
 ---
 Операционной системой в браузере с учетом существования WASM тяжело удивить — тысячи их! И Linux, и Windows, и FreeBSD, и Kolibri, и QNX... [1](https://bellard.org/jslinux/), [2](http://copy.sh/v86/), [3](https://www.pcjs.org/software/). А уж эмуляторов MS DOS, в которых можно еще и в старые игрушки поиграть (верните мне мне мой 1996-й) — вообще миллион.
 

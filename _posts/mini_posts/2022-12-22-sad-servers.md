@@ -2,6 +2,7 @@
 layout: post
 title: Тренажер сисадмина
 tags: [linux, tutorial, fun]
+tg_id: 362
 ---
 Приезжает дальнобойщик домой, думает, в какую бы игру залипнуть для расслабона — Euro Truck Simulator, каеф!
 

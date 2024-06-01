@@ -2,6 +2,7 @@
 layout: post
 title: Убьет ли project Loom корутины Kotlin?
 tags: [kotlin, java]
+tg_id: 409
 ---
 Неплохой [доклад](https://www.youtube.com/watch?v=zluKcazgkV4). Ответ, разумеется, "нет".
 

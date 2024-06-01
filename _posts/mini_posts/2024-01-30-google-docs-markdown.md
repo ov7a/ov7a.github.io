@@ -2,6 +2,7 @@
 layout: post
 title: Markdown в Google Docs
 tags: [google, markdown]
+tg_id: 479
 ---
 В гугл-доках [можно включить](https://support.google.com/docs/answer/12014036) распознавание (автозамену) Markdown.
 Забавно, что это в русской версии указано как "автоматически распознавать разметку", как будто других видов разметок нет.

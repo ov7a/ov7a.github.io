@@ -2,6 +2,7 @@
 layout: post
 title: Неймспейсы в k8s
 tags: [k8s]
+tg_id: 350
 ---
 В [документации](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) читаем:
 ```

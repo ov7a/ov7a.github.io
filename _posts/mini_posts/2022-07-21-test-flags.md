@@ -2,6 +2,7 @@
 layout: post
 title: Тестовые флаги
 tags: [bestpractices, testing, мысли]
+tg_id: 319
 ---
 Использование условий вида `if (test)` или `if (user in testUsers)` — это рак.
 

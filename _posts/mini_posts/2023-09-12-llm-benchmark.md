@@ -2,6 +2,7 @@
 layout: post
 title: Сравнение LLM
 tags: [ai, benchmark]
+tg_id: 435
 ---
 Занятное [сравнение](https://benchmarks.llmonitor.com/) LLM. При этом методика очень простая: задать несколько вопросов чат ботам и сравнить ответы.
 

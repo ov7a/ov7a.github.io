@@ -2,6 +2,7 @@
 layout: post
 title: Павлик Морозов для C++
 tags: [c]
+tg_id: 459
 ---
 Для [java](/2020/08/04/method-handle.html) и [Kotlin](/2022/10/13/kotlin-internal.html) павлики были, пришел через для C++.
 

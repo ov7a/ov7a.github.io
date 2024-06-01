@@ -2,6 +2,7 @@
 layout: post
 title: Павлик internal
 tags: [kotlin]
+tg_id: 342
 ---
 Продолжаю [делать Павликов](/2020/08/04/method-handle.html), потому что все нужное как всегда глубоко закопано и надо [выбирать стул](/gags/#2020-07-28-private-methods-in-library.png). На этот раз на очереди [internal](https://kotlinlang.org/docs/visibility-modifiers.html), который ограничивает видимость элемента модулем (т.е. если он в какой-то библиотеке, то только библиотека имеет к нему доступ). Его очень любят использовать сами Jetbrains в Ktor, корутинах, Exposed и т.п.
 

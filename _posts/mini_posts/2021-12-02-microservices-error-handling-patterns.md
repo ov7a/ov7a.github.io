@@ -2,6 +2,7 @@
 layout: post
 title: Паттерны обработки ошибок в микросервисной архитектуре
 tags: [архитектура, timeout]
+tg_id: 251
 ---
 Узнал пару недель назад, что почти все стандартные операции [обозваны](https://blog.codecentric.de/en/2019/06/resilience-design-patterns-retry-fallback-timeout-circuit-breaker/) [паттернами](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990):
 1. Timeout: не надо ждать ответа бесконечно.

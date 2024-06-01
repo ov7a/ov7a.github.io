@@ -2,6 +2,7 @@
 layout: post
 title: Запись команд терминала
 tags: [cli, tutorial]
+tg_id: 447
 ---
 Чтобы записать демонстрацию какой-нибудь последовательности команд, можно воспользоваться [Asciinema](https://asciinema.org/). Работает примерно так:
 ![](/assets/images/asciinema-demo.gif)

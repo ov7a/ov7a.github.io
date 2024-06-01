@@ -2,6 +2,7 @@
 layout: post
 title: Пирамида код-ревью
 tags: [bestpractices, teamlead]
+tg_id: 307
 ---
 В продолжение [темы про код-ревью](/2022/05/31/code-review-file-order.html) — [шпаргалка](https://www.morling.dev/images/code_review_pyramid.png) про то, чему стоит больше уделять внимание.
 

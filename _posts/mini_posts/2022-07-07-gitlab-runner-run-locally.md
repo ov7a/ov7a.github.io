@@ -2,6 +2,7 @@
 layout: post
 title: Локальный запуск билда Gitlab
 tags: [gitlab, devops, gradle]
+tg_id: 314
 ---
 Как отладить непонятную проблему в CI, если нет доступа к внутренним логам? [Запустить локально ее агент](https://stackoverflow.com/questions/32933174/use-gitlab-ci-to-run-tests-locally), благо сейчас все в контейнерах.
 

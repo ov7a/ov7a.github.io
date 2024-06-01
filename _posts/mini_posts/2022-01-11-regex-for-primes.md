@@ -2,6 +2,7 @@
 layout: post
 title: Проверка простоты числа с помощью регулярки
 tags: [math, regex]
+tg_id: 260
 ---
 ```python
 def is_prime(n):

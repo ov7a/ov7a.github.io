@@ -3,7 +3,6 @@ layout: post
 title: Что означает поле update в результатах update by query в Elasticsearch?
 tags: [elasticsearch]
 ---
-
 Смотрим в [документацию](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html#docs-update-by-query-api-response-body):
 ```
 updated

@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Простая scala
+title: Простая Scala
 tags: [scala, фп]
+tg_id: 466
 ---
 Занятный [доклад](https://www.youtube.com/watch?v=QRcD9Zc7eq4) от Одерски про усилия команды разработчиков языка, чтобы Scala стала проще. 
 

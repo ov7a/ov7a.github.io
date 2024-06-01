@@ -2,6 +2,7 @@
 layout: post
 title: Тренажер промптов для обхода ограничений
 tags: [ai, иб, tutorial]
+tg_id: 408
 ---
 [https://gandalf.lakera.ai/](https://gandalf.lakera.ai/)
 

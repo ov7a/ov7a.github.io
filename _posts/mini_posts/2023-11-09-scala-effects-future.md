@@ -2,6 +2,7 @@
 layout: post
 title: Будущее эффектов
 tags: [scala, фп]
+tg_id: 456
 ---
 Интересная [статья](https://softwaremill.com/the-future-of-effects-in-scala/) про будущее работы с эффектами в Scala. Это своего рода продолжение обсуждения про [добавление `suspend`-функций](/2022/07/19/scala-suspend.html) и [про новые подходы к обработке ошибок](/2021/10/28/scala-checked-exceptions.html).
 

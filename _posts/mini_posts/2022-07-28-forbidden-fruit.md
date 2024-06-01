@@ -2,6 +2,7 @@
 layout: post
 title: Запретный плод
 tags: [python]
+tg_id: 321
 ---
 ```
 >>> (666).boo()

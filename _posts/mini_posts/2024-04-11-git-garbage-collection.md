@@ -2,6 +2,7 @@
 layout: post
 title: Сборка мусора в git, GitHub и GitLab
 tags: [git, github, gitlab]
+tg_id: 500
 ---
 Как удалить коммит, который не принадлежит ни одной ветке, из git? Выполнить _на сервере_ `git gc`.
 

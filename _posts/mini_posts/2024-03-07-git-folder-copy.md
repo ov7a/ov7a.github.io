@@ -2,6 +2,7 @@
 layout: post
 title: Копирование файлов из другой ветки
 tags: [git]
+tg_id: 488
 ---
 Git — тот еще комбайн, про это полно [мемчиков](https://t.me/profunctor_io/9155).
 

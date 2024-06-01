@@ -2,6 +2,7 @@
 layout: post
 title: API телеграма и баны
 tags: [telegram, мысли]
+tg_id: 474
 ---
 Чтобы публиковать посты в канал, я почти сразу написал [скриптик](https://github.com/ov7a/telegram_publisher), чтобы решить проблемы с markdown (например, до сих пор в телеге markdown [не поддерживает](https://github.com/telegramdesktop/tdesktop/issues/4737) ссылки). Скрипт использовал [Telethon](https://github.com/LonamiWebs/Telethon), который подключается с использованием моего аккаунта.
 

@@ -2,6 +2,7 @@
 layout: post
 title: Впечатления от GitHub Copilot
 tags: [github, ai]
+tg_id: 394
 ---
 На всякий случай: пробовал не последний Copilot X, а обычную версию.
 

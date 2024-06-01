@@ -2,6 +2,7 @@
 layout: post
 title: alias при sudo
 tags: [linux, cli]
+tg_id: 332
 ---
 [Оказывается](https://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo), alias работает только для первого слова.
 Поэтому, если создать alias

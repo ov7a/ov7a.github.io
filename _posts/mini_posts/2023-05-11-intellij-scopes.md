@@ -2,6 +2,7 @@
 layout: post
 title: Области поиска в IntelliJ
 tags: [intellij]
+tg_id: 402
 ---
 В IntelliJ при поиске можно указать в качестве варианта, где искать, определенный тип кода — например, искать только в тестах. 
 Эти области поиска [можно редактировать](https://www.jetbrains.com/help/idea/settings-scopes.html), добавляя свои. 
