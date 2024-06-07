@@ -14,11 +14,9 @@
       <a href="{{ include.post.repost }}" class="repost" target="blank" title="Это репост моей публикации из другого источника"></a>
       {% endif %}
 
-	  {% if include.post.tags and include.post.tags.size > 0 %} |
 	  {% for tag in include.post.tags %}
 		<a href="{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
 	  {% endfor %}
-	  {% endif %}
     </p>
   </header>
 

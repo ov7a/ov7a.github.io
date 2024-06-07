@@ -20,6 +20,7 @@ blog:
 
 theme: minima
 date_format: "%d.%m.%Y"
+lang: ru
 
 future: true
 
@@ -29,14 +30,6 @@ plugins:
   - jekyll-commonmark-ghpages
   - jekyll-feed
   - jekyll-redirect-from
-
-header_pages:
-  - blog/index.html
-  - interactive/index.html
-  - mini_posts/index.html
-  - puzzles/index.md
-  - gags/index.html
-  - index.html
 
 tag_page:
   - /blog/tags.html
