@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Порядок просмотра файлов при код-ревью
-tags: [teamlead]
+tags: [teamlead, codereview]
 tg_id: 302
 ---
 Довольно интересное [исследование](https://neverworkintheory.org/2022/05/18/bacchelli-code-review.html) показало: 
