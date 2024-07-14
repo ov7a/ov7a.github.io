@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Понятность ошибок компилятора
-tags: [java, scala, kotlin, rust, go, elm, python, typescript]
+tags: [compiler, java, scala, kotlin, rust, go, elm, python, typescript]
 tg_id: 379
 ---
 Забавный [пост-сравнение](https://www.amazingcto.com/developer-productivity-compiler-errors/) степени подробности ошибок в разных языках.
