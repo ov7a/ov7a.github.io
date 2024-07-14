@@ -16,11 +16,9 @@ title: Теги
     <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }} ({{ tag[1].size }})</h2>
     <ul>
       {% for post in tag[1] %}
-        <a href="{{ site.baseurl }}{{ post.url }}">
       <li>
-        {{ post.title }}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </li>
-      </a>
       {% endfor %}
     </ul>
     {% endfor %}
