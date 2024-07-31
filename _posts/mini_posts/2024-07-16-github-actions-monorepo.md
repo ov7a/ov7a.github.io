@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Несколько GitHub Actions в одной репе
-tags: [githib, devops]
+tags: [github, devops]
 tg_id: 531
 ---
 Один репозиторий может содержать несколько GitHub Actions. Примеры: [1](https://github.com/gradle/actions), [2](https://github.com/gradle/issue-management-action). Это удобно для группировки нескольких действий. Чтобы выбрать нужное, достаточно добавить папку: 
