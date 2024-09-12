@@ -2,7 +2,7 @@
 layout: post
 title: Карта культурных различий
 tags: [teamlead, softskills, мысли]
-tg_id: 539
+tg_id: 540
 ---
 The Culture Map — довольно известная книга про то, как отличается рабочая культура разных стран. Пересказов в интернете полно, например [1](https://www.deployyourself.com/book-review/the-culture-map-erin-meyer-eight-scales/) или [2](https://secrets.tinkoff.ru/knigi-dlya-biznesa/karta-kulturnyh-razlichij/), все можно свести к 8 шкалам.
 
