@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Про продуктивность
-tags: [мысли, bestpractices]
+tags: [мысли, bestpractices, softskills]
 hidden: true
 ---
 По моим ощущениям, IT живет в культе продуктивности и эффективности. Это в целом неплохо, но тут очень легко перегнуть палку.
