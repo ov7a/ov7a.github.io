@@ -37,14 +37,14 @@ jobs:
         with:
           # excluded # and ## as they used in the gallery
           args: >
-            --no-progress --include-fragments --offline '_site' 
-            --exclude '##?$' 
+            --no-progress --include-fragments --offline '_site' --base="./_site"
+            --exclude '##?$'
             
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site/      
+          path: _site/
           
   deploy:
     needs: build-and-check
@@ -58,4 +58,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4          
+        uses: actions/deploy-pages@v4
