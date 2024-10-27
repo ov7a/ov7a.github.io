@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Проверка ссылок в Markdown
-tags: [markdown, docs, cli]
+tags: [markdown, docs, blogdev, cli]
 tg_id: 558
 ---
 Наткнулся на довольно [неплохую утилиту](https://lychee.cli.rs/introduction/), которой просто проверить папку с ворохом .md и/или HTML файлов на наличие битых ссылок. Для маленького количества файлов проще проверить глазами, да и вряд ли там будет много кросс-ссылок, для большой документации скорее всего будет использоваться что-то вроде [MkDocs](https://www.mkdocs.org/) со встроенными средствами и/или плагинами. А вот для среднего количества — самое то.
@@ -13,3 +13,5 @@ lychee --offline --include-fragments '**/*.md'
 Если есть сгенерированный контент, то лучше запускать на отрендеренном сайте.
 
 Есть и [GitHub Action](https://github.com/lycheeverse/lychee-action/), пример на моем репозитории [тут](https://github.com/ov7a/ov7a.github.io/blob/874eb018f30e48857474d00aa422f83b29303a1a/.github/workflows/check-links.yml) — при подключении [нашлось](https://github.com/ov7a/ov7a.github.io/pull/1/files) аж 3 ошибки.
+
+UPD: a после [исправления](https://github.com/ov7a/ov7a.github.io/commit/f60b93e543dd9c2a29e176f8e36f132028b7d4b5) командной строки, чтобы поддерживались относительные ссылки, нашлась еще пара косяков.
