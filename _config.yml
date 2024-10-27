@@ -9,6 +9,8 @@ commonmark:
   options: ["SMART", "FOOTNOTES", "UNSAFE"]
   extensions: ["strikethrough", "autolink", "table"]
 
+permalink: /:year/:month/:day/:title:output_ext
+
 pagination:
   enabled: true
   permalink: '/page:num/'
