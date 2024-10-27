@@ -75,4 +75,5 @@ defaults:
 exclude:
   - moving_dom/src*
   - moving_dom/Cargo*
-
+  - vendor/**
+  - bundle/**
