@@ -1,7 +1,4 @@
-{% assign items = site.static_files | where: "image", true | where: include.collection, true | sort: 'name' %}
-{% if include.reverse_order %}
-	{% assign items = items | reverse %}
-{% endif %}
+{% assign items = include.items %}
 {% assign notes = site.data[include.notes] %}
 {% if include.note_layout %}
 	{% assign note_layout = include.note_layout %}

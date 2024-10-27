@@ -35,38 +35,11 @@ defaults:
   - scope:
       path: "assets/gags"
     values:
-      image: true
-      gag: true
+      gag_image: true
   - scope:
-      path: "assets/puzzles/game00"
+      path: "assets/puzzles"
     values:
-      image: true
-      puzzle_game00: true
-  - scope:
-      path: "assets/puzzles/game01"
-    values:
-      image: true
-      puzzle_game01: true
-  - scope:
-      path: "assets/puzzles/game02"
-    values:
-      image: true
-      puzzle_game02: true
-  - scope:
-      path: "assets/puzzles/game03"
-    values:
-      image: true
-      puzzle_game03: true
-  - scope:
-      path: "assets/puzzles/game04"
-    values:
-      image: true
-      puzzle_game04: true
-  - scope:
-      path: "assets/puzzles/game05"
-    values:
-      image: true
-      puzzle_game05: true
+      puzzle_image: true    
   - scope:
       path: "_posts/mini_posts"
     values:

@@ -1,14 +1,23 @@
 ---
 layout: default
 ---
-{% assign notes="puzzle_notes_game" | append: page.number %}
-{% assign collection="puzzle_game" | append: page.number %}
-
 {{ content }}
 
+{% assign notes = "puzzle_notes_game" | append: page.number %}
+{% assign collection_name ="game" | append: page.number %}
+
+{% assign collection = "" | split: "," %}
+{% for file in site.static_files %}
+  {% if file.puzzle_image %}
+  	{% if file.path contains collection_name %}
+  	    {% assign collection = collection | push: file %}
+  	{% endif %}
+  {% endif %}
+{% endfor %}
+
 {% include gallery.html
-	note_layout="puzzle_notes"
-	notes=notes
-	collection=collection
+	items = collection
+	note_layout = "puzzle_notes"
+	notes = notes
 %}
 
