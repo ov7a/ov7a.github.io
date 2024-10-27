@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Облегчение Font Awesome и задержка из-за CSS
-tags: [frontend, web]
+tags: [frontend, web, blogdev]
 ---
 Внезапно обнаружил, что Font Awesome, webdings современного интернета, является встроенным шрифтом в Ubuntu. Однако для других систем его все равно надо подключать. Раздаваемый с CDN CSS, кроме директивы [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face), содержит еще и кучу лишних предопределенных классов, которые просто проставляют содержимое с нужным юникод-символом.
 

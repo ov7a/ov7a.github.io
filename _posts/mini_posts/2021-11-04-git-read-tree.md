@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git read-tree
-tags: [git]
+tags: [git, blogdev]
 ---
 В гите достаточно [много способов](https://stackoverflow.com/questions/6500524/alternatives-to-git-submodules) скопировать данные из одного репозитория в другой. Один из них — [read-tree](https://git-scm.com/docs/git-read-tree). Ключевая идея: берем поддерево одного репозитория и вставляем его в дерево другого. [Демка для зумеров](https://www.youtube.com/watch?v=t3Qhon7burE).
 

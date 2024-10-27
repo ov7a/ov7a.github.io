@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Комменты телеграма на сайте и похвала роботам
-tags: [telegram, ai, мысли]
+tags: [blogdev, telegram, ai, мысли]
 category: blog
 tg_id: 517
 ---

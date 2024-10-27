@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [web, css, frontend]
+tags: [web, css, frontend, blogdev]
 title: Впечатления от CSS, или как я галерею со смешнявками делал
 category: blog
 ---
