@@ -2,7 +2,7 @@
 layout: post
 tags: [smartrhino, teamlead, softskills]
 title: "Программист — существо социальное"
-hidden: true
+category: blog
 repost: https://vk.com/@smartrhino-programmist-suschestvo-socialnoe
 ---
 # Работа в команде

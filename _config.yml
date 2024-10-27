@@ -9,14 +9,11 @@ commonmark:
   options: ["SMART", "FOOTNOTES", "UNSAFE"]
   extensions: ["strikethrough", "autolink", "table"]
 
-paginate: 10
-paginate_path: "/mini_posts/page:num/"
-paginate_first_page: "/mini_posts"
-
-blog:
-  paginate: 5
-  paginate_path: "/blog/page:num/"
-  paginate_first_page: "/blog"
+pagination:
+  enabled: true
+  permalink: '/page:num/'
+  title: ':title'
+  sort_reverse: true
 
 theme: minima
 date_format: "%d.%m.%Y"
@@ -26,7 +23,7 @@ future: true
 
 plugins:
   - jekyll-sitemap
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-commonmark-ghpages
   - jekyll-feed
   - jekyll-redirect-from
@@ -70,6 +67,10 @@ defaults:
     values:
       image: true
       puzzle_game05: true
+  - scope:
+      path: "_posts/mini_posts"
+    values:
+      category: mini_post 
 
 exclude:
   - moving_dom/src*

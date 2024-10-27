@@ -2,7 +2,7 @@
 layout: post
 tags: [smartrhino, bestpractices, teamlead, softskills]
 title: "Teamlead: постановка задач"
-hidden: true
+category: blog
 repost: https://vk.com/@smartrhino-teamlead-postanovka-zadach
 ---
 ![](/assets/images/tasking.jpg)

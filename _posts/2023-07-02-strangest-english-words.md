@@ -2,7 +2,7 @@
 layout: post
 title: Самое странное английское слово
 tags: [words]
-hidden: true
+category: blog
 tg_id: 417
 ---
 В интернете полно юморных видосов про несоответствие написания и произношения английских слов (например, [1](https://youtu.be/3ipFdRfFvK4), [2](https://www.youtube.com/watch?v=rXW3Xk_cLag), [3](https://www.youtube.com/watch?v=XVLzDaOYUdk)). Мне пришла в голову дурацкая идея — найти слово, которое больше всего на себя не похоже (choir? through?).

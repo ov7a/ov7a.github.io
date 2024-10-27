@@ -2,7 +2,7 @@
 layout: post
 tags: [видео, fun]
 title: Расширенные возможности команды ping
-hidden: true
+category: blog
 repost: https://youtube.com/watch?v=2N9f0MbVha0
 ---
 Прислал кто-то смешнявку:

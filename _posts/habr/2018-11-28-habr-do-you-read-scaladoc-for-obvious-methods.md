@@ -2,7 +2,7 @@
 layout: post
 title: Читаете ли вы Scaladoc для «очевидных» методов коллекций? Или почему лениться не всегда хорошо
 tags: [habr, scala]
-hidden: true
+category: blog
 repost: https://habr.com/ru/post/430538/
 ---
 Если вы не знаете, чем отличаются 

@@ -2,7 +2,7 @@
 layout: post
 title: Автоматический рефакторинг кода с помощью OpenRewrite
 tags: [java, legacy]
-hidden: True
+category: blog
 tg_id: 536
 ---
 Попробовал применить [OpenRewrite](https://docs.openrewrite.org/) к репозиторию Gradle и если вкратце, то все очень плохо.

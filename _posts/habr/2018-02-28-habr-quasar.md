@@ -2,7 +2,7 @@
 layout: post
 title: Опыт использования библиотеки Puniverse Quasar для акторов
 tags: [habr, kotlin, quasar, actors]
-hidden: true
+category: blog
 repost: https://habr.com/ru/post/350182/
 ---
 _С появлением котлиновских корутин и маячащим релизом project loom эта статья потеряла свою актуальность_

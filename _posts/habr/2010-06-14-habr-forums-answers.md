@@ -2,7 +2,7 @@
 layout: post
 title: О стилистике ответов на форумах
 tags: [habr, общение, форумы]
-hidden: true
+category: blog
 repost: https://habr.com/ru/post/96414/
 ---
 _Ему про Ерему, а он про Фому._

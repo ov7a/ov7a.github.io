@@ -2,7 +2,7 @@
 layout: post
 title: Как себе выстрелить в ногу в Kotlin
 tags: [habr, kotlin, scala, ноги, стрельба]
-hidden: true
+category: blog
 repost: https://habr.com/ru/post/278169/
 ---
 Совсем недавно вышел <a href="http://blog.jetbrains.com/kotlin/2016/02/kotlin-1-0-released-pragmatic-language-for-jvm-and-android/">релиз</a> Kotlin, а его команда разработчиков предлагала <a href="https://habrahabr.ru/company/JetBrains/blog/277573/">задавать вопросы</a> про язык. Он сейчас на слуху и, возможно, многим хочется его попробовать. 

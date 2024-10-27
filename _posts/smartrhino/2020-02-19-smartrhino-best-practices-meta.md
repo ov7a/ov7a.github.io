@@ -2,7 +2,7 @@
 layout: post
 tags: [smartrhino, bestpractices]
 title: "Лучшие практики и с чем их едят"
-hidden: true
+category: blog
 repost: https://vk.com/@smartrhino-best-practices-food-for-thought
 ---
 ![](/assets/images/siths.jpg)

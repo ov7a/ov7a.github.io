@@ -2,7 +2,7 @@
 layout: post
 title: Что внутри у мягкой ссылки
 tags: [linux, fs, tutorial]
-hidden: true
+category: blog
 tg_id: 407
 ---
 На примере ext4. Краткая справка: с каждым логическим файлом ассоциирован inode, который хранит его [метаданные](https://ext4.wiki.kernel.org/index.php/Ext4_Disk_Layout#Inode_Table): права доступа, атрибуты, указатели на блоки с данными и т.п. 

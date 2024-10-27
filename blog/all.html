@@ -1,7 +1,14 @@
 ---
-layout: all_list
+layout: default
 title: Журнал
 exclude: true
-prefix: /blog
-hidden: true
 ---
+{% include list_header.html
+	title = page.title
+	type = "list"
+	root = page.dir
+%}
+
+{% include posts_list.html
+	posts = site.categories.blog
+%}

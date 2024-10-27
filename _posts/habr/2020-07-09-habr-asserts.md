@@ -2,7 +2,7 @@
 layout: post
 tags: [habr, kotlin, testing, asserts]
 title: Выбор библиотеки ассертов для проекта на Kotlin
-hidden: true
+category: blog
 repost: https://habr.com/ru/post/510206/
 ---
 

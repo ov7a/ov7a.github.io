@@ -1,0 +1,36 @@
+<div class="posts">
+	{% for post in include.paginator.posts %}
+		{% include post_content.html
+			post=post
+			discuss=false
+			header-type="list"
+			anchor=false
+		%}
+	{% endfor %}
+</div>
+
+{% if include.paginator.total_pages > 1 %}
+<div class="pagination">
+	{% if include.paginator.previous_page %}
+		<a href="{{ include.paginator.previous_page_path | relative_url }}">← </a>
+	{% else %}
+		<span>← </span>
+	{% endif %}
+
+	{% for page in (1..include.paginator.total_pages) %}
+		{% if page == include.paginator.page %}
+			<span>{{ page }}</span>
+		{% elsif page == 1 %}
+			<a href="{{ include.paginator.first_page_path | relative_url }}">{{ page }}</a>
+		{% else %}
+			<a href="{{ include.paginate_root | append: site.pagination.permalink | relative_url | replace: ':num', page }}">{{ page }}</a>
+		{% endif %}
+	{% endfor %}
+
+	{% if include.paginator.next_page %}
+		<a href="{{ include.paginator.next_page_path | relative_url }}"> →</a>
+	{% else %}
+		<span> →</span>
+	{% endif %}
+</div>
+{% endif %}

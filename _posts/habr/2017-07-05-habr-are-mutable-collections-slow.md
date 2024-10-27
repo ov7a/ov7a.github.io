@@ -2,7 +2,7 @@
 layout: post
 title: Зачем мне твои неизменяемые коллекции? Они же медленные
 tags: [habr, kotlin, scala, jmh, benchmark]
-hidden: true
+category: blog
 repost: https://habr.com/ru/post/332460/
 ---
 _Читая эту статью почти три года спустя, понимаю, что исследование весьма поверхностное, поэтому стоит воспринимать ее скептически._

@@ -1,8 +1,8 @@
 <div class="list-header">
 	<h1 class="post-list">{{ include.title }}</h1> 
 	{% if include.type == "list" %}
-		<a href="{{ include.prefix }}/index.html" class="list-type timeline" title="Показать лентой"></a>
+		<a href="{{ include.root }}/index.html" class="list-type timeline" title="Показать лентой"></a>
 	{% else %}	
-		<a href="{{ include.prefix }}/all.html" class="list-type list" title="Показать списком"></a>
+		<a href="{{ include.root }}/all.html" class="list-type list" title="Показать списком"></a>
 	{% endif %}
 </div>

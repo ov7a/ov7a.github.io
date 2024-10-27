@@ -1,7 +1,17 @@
 ---
-layout: all_list
+layout: default
 title: Минутка просвещения
 exclude: true
-prefix: /mini_posts
 ---
+{% include list_header.html
+	title = page.title
+	type = "list"
+	root = page.dir
+%}
+
 <p><a href="//t.me/minutkaprosvescheniya" target="_blank">Читать в телеге</a>. Когда-то там были посты не только от меня.</p>
+
+{% include posts_list.html
+	posts = site.categories.mini_post
+%}
+

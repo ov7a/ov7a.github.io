@@ -1,4 +1,19 @@
 ---
-layout: blog_page
+layout: default
 title: Журнал
+root: '/blog'
+pagination:
+  enabled: true
+  category: blog
+  per_page: 5
 ---
+{% include list_header.html
+	title = page.title
+	type = "timeline"
+	root = page.root
+%}
+
+{% include posts_page.html
+	paginator = paginator
+	paginate_root = page.root
+%}

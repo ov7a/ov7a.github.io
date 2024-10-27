@@ -2,7 +2,7 @@
 layout: post
 title: Боль code quality
 tags: [мысли, devops, gitlab, testing, gradle]
-hidden: true
+category: blog
 tg_id: 373
 ---
 У меня сложилось впечатление, что как-то все очень плохо в индустрии с обеспечением качества кода, ну это или мне так везет.

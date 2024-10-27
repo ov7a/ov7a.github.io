@@ -1,19 +1,21 @@
 ---
 layout: default
 title: Минутка просвещения
+root: '/mini_posts'
+pagination:
+  enabled: true
+  category: mini_post
+  per_page: 10
 ---
-	{%include list_header.html
-		title=page.title
-		type="timeline"
-		prefix="/mini_posts"
-	%}
+{% include list_header.html
+	title = page.title
+	type = "timeline"
+	root = page.root
+%}
 
-	<p><a href="//t.me/minutkaprosvescheniya" target="_blank">Читать в телеге</a>. Когда-то там были посты не только от меня.</p>
+<p><a href="//t.me/minutkaprosvescheniya" target="_blank">Читать в телеге</a>. Когда-то там были посты не только от меня.</p>
 
-	{% include paginator.html
-		posts = paginator.posts
-		total_pages = paginator.total_pages
-		page_num = paginator.page
-		paginate_path = site.paginate_path
-		first_page_path = site.paginate_first_page
-	%}
+{% include posts_page.html
+	paginator = paginator
+	paginate_root = page.root
+%}

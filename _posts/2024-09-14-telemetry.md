@@ -2,7 +2,7 @@
 layout: post
 title: Про телеметрию
 tags: [privacy, bestpractices, мысли]
-hidden: True
+category: blog
 tg_id: 550
 ---
 TLDR: следить за пользователями — это обычно плохая идея.
