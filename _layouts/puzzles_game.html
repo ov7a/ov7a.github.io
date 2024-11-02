@@ -15,8 +15,9 @@ layout: default
   {% endif %}
 {% endfor %}
 
+{% assign sorted_collection = collection | sort: 'name' %}
 {% include gallery.html
-	items = collection
+	items = sorted_collection
 	note_layout = "puzzle_notes"
 	notes = notes
 %}
