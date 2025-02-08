@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Балансировка нагрузки
-tags: [tutorial, fun, http, утюг]
+tags: [tutorial, algorithms, fun, http, утюг]
 tg_id: 397
 ---
 Классная интерактивная [статья](https://samwho.dev/load-balancing/) про варианты балансировки нагрузки — от Round Robin до PEWMA. 
