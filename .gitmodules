@@ -9,3 +9,6 @@
 	url = https://github.com/ov7a/moving_dom
 	branch = built
 
+[submodule "github-contributions"]
+	path = github-contributions
+	url = git@github.com:ov7a/github-contributions.git
