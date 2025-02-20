@@ -11,3 +11,5 @@ is:pr author:ov7a
 ```
 is:pr author:udalov -user:JetBrains -user:Kotlin
 ```
+
+UPD: более красивая [страничка](/github-contributions?user=ov7a) для этого.
