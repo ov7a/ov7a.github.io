@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Связи в проекте и Github Action
+title: Связи в проекте и GitHub Action
 tags: [github, teamlead, typescript, devops, jira, redmine]
 tg_id: 281
 ---

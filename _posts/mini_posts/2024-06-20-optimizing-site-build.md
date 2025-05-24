@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Небольшая оптимизация сайтика
-tags: [blogdev, softskills, github, мысли]
+tags: [blogdev, softskills, мысли]
 tg_id: 523
 ---
 Коротко о том, как у меня примерно было написано резюме (по всем заветам и рекомендациям).
