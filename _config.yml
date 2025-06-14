@@ -41,11 +41,11 @@ defaults:
   - scope:
       path: "assets/puzzles"
     values:
-      puzzle_image: true    
+      puzzle_image: true
   - scope:
       path: "_posts/mini_posts"
     values:
-      category: mini_post 
+      category: mini_post
 
 exclude:
   - moving_dom/src*
