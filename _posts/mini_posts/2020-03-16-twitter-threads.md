@@ -7,3 +7,5 @@ tags: [twitter, util]
 Так вот, есть специальный бот, чтобы из треда с сотней твитов сделать обычную статью:
 [https://threadreaderapp.com/](https://threadreaderapp.com/).
 Типа упоминаешь его твитом и он разворачивает тред.
+
+UPD: сервис перестал работать, нашел другой: [unrollnow.com](https://unrollnow.com/)
