@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Стандарты POSIX
-tags: [linux, macos, cli]
+tags: [linux, mac, cli]
 tg_id: 592
 ---
 В продолжение [поста](/2024/12/26/bash-crossplatform.html) про кроссплатформенность bash: даже если вы проверили скрипт каким-нибудь [shellcheck](https://github.com/koalaman/shellcheck) на совместимость с POSIX, это не значит, что он будет работать на _всех_ POSIX-совместимых платформах. Это даже не значит, что работать на всех _современных_ POSIX-совместимых платформах, потому что есть какая-нибудь [z/OS](https://www.ibm.com/docs/en/zos/3.1.0?topic=cc-zos-unix-system-services) для мейнфреймов, которая вышла 1,5 года назад, и которую кто-то [даже использует](https://github.com/gradle/gradle/issues/32153).
