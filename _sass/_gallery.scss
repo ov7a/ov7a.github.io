@@ -5,7 +5,7 @@
 .preview {
 	float: left;
 	width: 30%;
-	height: 200px; /*this makes me sad*/
+	aspect-ratio: 1;
 	padding: 1%;
 	background: $background-color;
 }
