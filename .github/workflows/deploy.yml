@@ -15,20 +15,46 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-        
+          path: website
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4 # v1.207.0
         with:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
-          
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        
+          working-directory: website
+
+      - name: Setup Koka
+        run: |
+          curl -sSL https://github.com/koka-lang/koka/releases/download/v3.1.3/install.sh > install-koka.sh
+          echo 'f6087d72ad498143469957a887c0a9e9e7d9bb038e4eeedd467b0573694cbb93 install-koka.sh' > checksum.txt
+          sha256sum -c checksum.txt
+          sudo sh install-koka.sh
+
+      - name: Checkout search
+        uses: actions/checkout@v4
+        with:
+          repository: ov7a/klava
+          path: search
+
+      - name: Build search
+        working-directory: search
+        run: |
+          ./install_libs.sh
+          koka -c src/frontend/search.kk -i./src --target=js -O3
+          mkdir -p ../website/search
+          cp -r .koka/*/js-drelease*/*.mjs ../website/search
+          cp -r .koka/*/js-drelease*/*.html ../website/search
+
+      - name: Index data
+        working-directory: search
+        run: |
+          koka -e src/extractor/extract.kk -i./src --target=c --cclibdir=$(dirname $(g++ --print-file-name=libstdc++.a)) --cclibdir=$(dirname $(g++ --print-file-name=libicuuc.a)) -- ../website/search/index.json ../website/_posts
+
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        working-directory: website
+        run: bundle exec jekyll build --baseurl ""
         env:
           JEKYLL_ENV: production
 
@@ -37,15 +63,15 @@ jobs:
         with:
           # excluded # and ## as they used in the gallery
           args: >
-            --no-progress --include-fragments --offline '_site' --base="./_site"
+            --no-progress --include-fragments --offline './website/_site' --base="./website/_site"
             --exclude '##?$'
-            
+
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site/
-          
+          path: website/_site/
+
   deploy:
     needs: build-and-check
     permissions:
