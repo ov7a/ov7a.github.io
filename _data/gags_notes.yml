@@ -30,7 +30,7 @@
   Жиза жизненнее некуда. Возникла еще в связи с рабочей задачей.
   [https://t.me/profunctor_io/5035](https://t.me/profunctor_io/5035)
 2020-08-21-electron-vs-xorg.png: |
-  [Подробности](/2020/08/27/electron-vs-xorg.html)  
+  [Подробности](/2020/08/27/electron-vs-xorg.html)
 2020-11-12-rossum-ms.png: |
   Принять-то приняли, но картинка-то так себе (и я вывалился из топ-10).
   [https://t.me/profunctor_io/5784](https://t.me/profunctor_io/5784)
@@ -41,7 +41,7 @@
   [https://t.me/profunctor_io/6245](https://t.me/profunctor_io/6245)
   [Внезапное продолжение спустя 4 года](https://t.me/code500/9112)
 2021-05-19-feeding-tasks.png: |
-  [Подробности](/2021/07/20/dividing-subtasks.html)  
+  [Подробности](/2021/07/20/dividing-subtasks.html)
 2021-06-23-refactoring.jpg: |
   Вообще говоря, это немного [баян](https://t.me/dev_meme/3115), но осознал я это слишком поздно :(
 2021-10-06-js-in-kotlin-js.png: |
@@ -59,11 +59,11 @@
   [Подробности](/2022/03/07/profunctor-rating-elm.html)
 2022-05-02-dependabot.png: |
   [https://t.me/profunctor_io/7911](https://t.me/profunctor_io/7911)
-2022-06-07-agile.png: |  
+2022-06-07-agile.png: |
   [https://t.me/profunctor_io/7983](https://t.me/profunctor_io/7983)
 2022-07-10-context-receivers.png: |
   [Подробности](/2022/07/14/kotlin-context-receivers.html)
-2022-09-15-grep-logs.png: |  
+2022-09-15-grep-logs.png: |
   [https://t.me/profunctor_io/8254](https://t.me/profunctor_io/8254)
 2022-10-13-print-debug.png: |
   [https://t.me/profunctor_io/8345](https://t.me/profunctor_io/8345)
@@ -89,13 +89,15 @@
 2024-06-23-anonymous-poll.png: |
   Картинка смешная, а ситуация страшная. Реально ведь хотел в опросе поучаствовать... Но хотя бы географию мем-пабликов [расширил](https://t.me/theaftertimes/17469).
 2024-09-12-gradle-task-names.png: |
-  Наконец-то мем про работу и не про боль (ну или не совсем про боль). 
+  Наконец-то мем про работу и не про боль (ну или не совсем про боль).
 
   [Контекст](https://github.com/gradle/gradle/pull/30500/files#diff-62da0fa56e4d62f4b8bf0d85e5636c9241bef5c8d0ade3dffbbf51d9e10171d2R287-R314)
-  
+
   [https://t.me/profunctor_io/10379](https://t.me/profunctor_io/10379)
 2025-03-28-merge-button.png: |
   [https://t.me/profunctor_io/10759](https://t.me/profunctor_io/10759)
-  
+
   И немного [духоты](https://english.stackexchange.com/questions/55672/is-it-what-it-looks-like-or-how-it-looks-like)
-  
+2025-07-14-cpp-println.gif: |
+  Еще одно подтверждение тому, что C++ [круче Java](/gags/#2023-09-27-java-21.gif)
+
