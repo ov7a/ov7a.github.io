@@ -18,19 +18,33 @@ jobs:
           path: website
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4 # v1.207.0
+        uses: ruby/setup-ruby@472790540115ce5bd69d399a020189a8c87d641f # v1.247.0
         with:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
           working-directory: website
 
+      - name: Setup Koka deps
+        uses: awalsh128/cache-apt-pkgs-action@4c82c3ccdc1344ee11e9775dbdbdf43aa8a5614e #v1.5.1
+        with:
+          packages: build-essential cmake cmake-data libjsoncpp25 librhash0 ninja-build
+
+      - name: Cache Koka setup
+        id: cache-koka
+        uses: actions/cache@v4
+        with:
+          key: koka-setup
+          path: |
+            ./koka
+
       - name: Setup Koka
+        if: steps.cache-koka.outputs.cache-hit != 'true'
         run: |
           curl -sSL https://github.com/koka-lang/koka/releases/download/v3.1.3/install.sh > install-koka.sh
           echo 'f6087d72ad498143469957a887c0a9e9e7d9bb038e4eeedd467b0573694cbb93 install-koka.sh' > checksum.txt
           sha256sum -c checksum.txt
-          sudo sh install-koka.sh
+          sudo sh install-koka.sh -- --prefix=$PWD/koka
 
       - name: Checkout search
         uses: actions/checkout@v4
@@ -42,13 +56,13 @@ jobs:
         working-directory: search
         run: |
           ./install_libs.sh
-          koka -c src/frontend/search.kk -i./src --target=js -O3
+          ../koka/bin/koka -c src/frontend/search.kk -i./src --target=js -O3
           cp -r .koka/*/js-drelease*/*.mjs ../website/search
 
       - name: Index data
         working-directory: search
         run: |
-          koka -e src/extractor/extract.kk -i./src --target=c --cclibdir=$(dirname $(g++ --print-file-name=libstdc++.a)) --cclibdir=$(dirname $(g++ --print-file-name=libicuuc.a)) -- ../website/search/index.json ../website/_posts
+          ../koka/bin/koka -e src/extractor/extract.kk -i./src --target=c --cclibdir=$(dirname $(g++ --print-file-name=libstdc++.a)) --cclibdir=$(dirname $(g++ --print-file-name=libicuuc.a)) -- ../website/search/index.json ../website/_posts
 
       - name: Build with Jekyll
         working-directory: website
