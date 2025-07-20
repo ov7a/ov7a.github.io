@@ -43,9 +43,7 @@ jobs:
         run: |
           ./install_libs.sh
           koka -c src/frontend/search.kk -i./src --target=js -O3
-          mkdir -p ../website/search
           cp -r .koka/*/js-drelease*/*.mjs ../website/search
-          cp -r .koka/*/js-drelease*/*.html ../website/search
 
       - name: Index data
         working-directory: search
