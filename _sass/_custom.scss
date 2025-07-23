@@ -1,6 +1,11 @@
 $theme-color: #2a7ae2 !default;
 $font-font-awesome: FontAwesome;
 
+.post-content p {
+	hyphens: manual;
+	text-align: justify;
+}
+
 h1.post-list {
 	float: left;
 }
