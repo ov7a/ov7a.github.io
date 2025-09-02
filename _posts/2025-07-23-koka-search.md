@@ -427,3 +427,5 @@ mimalloc: error: buffer overflow in heap block 0x020080000580 of size 65528: wri
 
 ![](/assets/images/trolleybus.jpeg)
 ![](/assets/images/because.jpeg)
+
+UPD: у этой истории есть еще и третья [часть](/2025/09/02/koka-update.html).
