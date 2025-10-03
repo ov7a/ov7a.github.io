@@ -8,3 +8,5 @@ tg_id: 551
 
 Сегодня: не можешь пройти [тест](https://leonfurze.com/deepfake-game/), сгенерирована картинка или нет.
 
+UPD: [игруля посвежее](https://realitycheckk.com/week1) на ту же тему.
+
