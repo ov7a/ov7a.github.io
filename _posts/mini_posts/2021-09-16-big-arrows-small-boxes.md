@@ -3,7 +3,7 @@ layout: post
 title: Большие стрелки и маленькие квадратики
 tags: [архитектура]
 ---
-Когда готовил доклад [про скучное программирование](https://ov7a.github.io/2019/10/30/npio-2019.html), то не нашел [эту статью](http://wordaligned.org/articles/distorted-software), поэтому заменил затравку на цитату Хоара ("Inside every large program is a small program struggling to get out.").
+Когда готовил доклад [про скучное программирование](/2019/10/30/npio-2019.html), то не нашел [эту статью](http://wordaligned.org/articles/distorted-software), поэтому заменил затравку на цитату Хоара ("Inside every large program is a small program struggling to get out.").
 
 А ключевая идея статьи заключается в том, что больше всего времени разработчика тратится не на бизнес-логику приложения, а на интеграции и передачу данных между различными слоями и компонентами. И картинки с тонкими стрелочками и крупными блоками искажают картину. С точки зрения трудозатрат они должны выглядеть примерно так:
 ![](/assets/images/distorted-application.png)
