@@ -20,10 +20,15 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@472790540115ce5bd69d399a020189a8c87d641f # v1.247.0
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.3.8'
           bundler-cache: true
           cache-version: 0
           working-directory: website
+
+      - name: Check TG ids
+        run: |
+          cd website
+          bundle exec ruby .github/workflows/check_tg_ids.rb
 
       - name: Get search
         run: |
