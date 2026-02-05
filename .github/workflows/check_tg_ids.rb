@@ -49,7 +49,7 @@ def fetch_posts(tg_id)
   messages = doc.css('div.tgme_widget_message').map do |message_div|
     id = message_div['data-post'].split("/")[-1].to_i
 
-    text_container = message_div.at_css('div.tgme_widget_message_text')
+    text_container = message_div.at_css('div.tgme_widget_message_bubble > div.tgme_widget_message_text')
     next nil if text_container.nil?
 
     text_container.search('br').each { |br| br.replace("\n") } # :harold:
@@ -108,8 +108,7 @@ def main()
   end
 
   tg_posts = fetch_all_tg_posts(posts.map{ |p| p["tg_id"].to_i })
-  #puts posts
-  #puts tg_posts
+  puts "fetched #{tg_posts.keys}"
 
   errors = posts.map {|p| check_post(p, tg_posts) }.select { |e| e != nil }
   if errors.empty?
