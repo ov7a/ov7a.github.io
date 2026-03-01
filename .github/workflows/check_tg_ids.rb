@@ -56,10 +56,8 @@ def fetch_posts(tg_id)
     text = text_container.text.strip
 
     lines = text.split("\n").reject(&:empty?)
-    next nil if lines.size < 2
-
-    tags = lines[0].split(",").map { |t| t.strip.delete_prefix("#")}
-    title = lines[1]
+    tags = lines[0].split(",").map { |t| t.strip.delete_prefix("#")} || []
+    title = lines[1] || ""
 
     [id, {"tags" => tags, "title" => title}]
   end.reject(&:nil?).to_h
@@ -96,7 +94,7 @@ def check_post(post, tg_posts)
   when (correct_post_id.nil? and tg_id == tg_posts.keys.max + 1 and post["_length"] > 1000)
     nil # articles can be published in advance
   else
-    "TG post with id #{tg_id}, referenced in #{path}, hasn't been found."
+    "TG post with id #{tg_id}, referenced in #{path}, hasn't been found. Max post id: #{tg_posts.keys.max + 1}, post length: #{post["_length"]}."
   end
 end
 
