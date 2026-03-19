@@ -2,7 +2,7 @@
 layout: post
 title: Шпаргалка по Gradle
 tags: [gradle, tutorial]
-tg_id: 711
+tg_id: 712
 ---
 ![](/assets/gags/2024-04-02-learning-gradle.jpg)
 
