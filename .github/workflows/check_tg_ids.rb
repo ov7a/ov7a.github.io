@@ -76,25 +76,41 @@ def fetch_all_tg_posts(ids)
   results
 end
 
+def normalize_tags(tags)
+  tags.map { |t| t.gsub("#", "sharp") }
+end
+
 def check_post(post, tg_posts)
   tg_id = post["tg_id"].to_i
   path = post["_path"]
   tg_post = tg_posts[tg_id]
-  return nil if not tg_post.nil? and post["title"] == tg_post["title"] and post["tags"] == tg_post["tags"]
-  correct_post_id, correct_post = tg_posts.find { |k, v| v["title"] == post["title"] && v["tags"] == post["tags"] }
-  case
-  when ((not tg_post.nil?) and (not correct_post_id.nil?))
-    "TG post with id #{tg_id}, referenced in #{path}, is incorrect: it should be #{correct_post_id}, titled #{correct_post["title"]}."
-  when (correct_post_id.nil? and not tg_post.nil?)
-    if (post["title"] != tg_post["title"])
-      "TG post with id #{tg_id}, referenced in #{path}, has different title (#{tg_post["title"]})."
+  post_tags = normalize_tags(post["tags"])
+
+  if post["category"] == "blog"
+    # Articles: TG post should not exist yet, id must be max+1
+    if tg_post.nil? && tg_id == tg_posts.keys.max + 1
+      nil
+    elsif tg_post.nil?
+      "TG post with id #{tg_id}, referenced in #{path}, hasn't been found. Expected id: #{tg_posts.keys.max + 1}."
     else
-      "TG post with id #{tg_id}, referenced in #{path}, has different tags (#{tg_post["tags"]})."
+      "TG post with id #{tg_id}, referenced in #{path}, already exists but post has category:blog (expected missing TG post with id #{tg_posts.keys.max + 1})."
     end
-  when (correct_post_id.nil? and tg_id == tg_posts.keys.max + 1 and post["_length"] > 1000)
-    nil # articles can be published in advance
   else
-    "TG post with id #{tg_id}, referenced in #{path}, hasn't been found. Max post id: #{tg_posts.keys.max + 1}, post length: #{post["_length"]}."
+    # Mini posts: TG post must exist with matching title and tags
+    return nil if !tg_post.nil? && post["title"] == tg_post["title"] && post_tags == tg_post["tags"]
+    correct_post_id, correct_post = tg_posts.find { |k, v| v["title"] == post["title"] && v["tags"] == post_tags }
+    case
+    when (!tg_post.nil? && !correct_post_id.nil?)
+      "TG post with id #{tg_id}, referenced in #{path}, is incorrect: it should be #{correct_post_id}, titled #{correct_post["title"]}."
+    when (correct_post_id.nil? && !tg_post.nil?)
+      if post["title"] != tg_post["title"]
+        "TG post with id #{tg_id}, referenced in #{path}, has different title (#{tg_post["title"]})."
+      else
+        "TG post with id #{tg_id}, referenced in #{path}, has different tags (#{tg_post["tags"]})."
+      end
+    else
+      "TG post with id #{tg_id}, referenced in #{path}, hasn't been found. Max post id: #{tg_posts.keys.max + 1}, post length: #{post["_length"]}."
+    end
   end
 end
 
