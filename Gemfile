@@ -17,4 +17,7 @@ end
 gem "kramdown-parser-gfm"
 
 gem "nokogiri", "~> 1.19.0"
-
+gem "webrick", "~> 1.9"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
