@@ -115,6 +115,10 @@ def check_post(post, tg_posts)
 end
 
 def main()
+  if ENV["GITHUB_EVENT_NAME"] == "workflow_dispatch"
+    puts "Workflow was manually started on master"
+    exit 0
+  end
   posts = get_changed_files().map { |f| parse_post(f) }
   if posts.empty?
     puts "No changed posts in pushed commits."
