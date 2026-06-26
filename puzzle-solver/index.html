@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aquarium Solver</title>
+  <style>
+    :root {
+      --fg:#16202b; --muted:#62717f; --line:#e2e8f0; --bg:#eef2f7; --card:#ffffff;
+      --accent:#2f7ad6; --accent-soft:#eaf2fc; --low:#d9822b; --low-soft:#fff7ee;
+      --water:#2176ff; --air:#e53935; --why:#f2a900;
+      --shadow:0 1px 2px rgba(16,32,48,.06), 0 4px 16px rgba(16,32,48,.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 28px 16px 64px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--fg); background: var(--bg); line-height: 1.5;
+      -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    header { margin-bottom: 20px; }
+    h1 { font-size: 22px; letter-spacing: -.01em; margin: 0 0 4px; }
+    h3 { margin: 0 0 8px; font-size: 15px; }
+    .sub { color: var(--muted); margin: 0; font-size: 14px; }
+
+    .dropzone {
+      border: 1.5px dashed #b9c6d6; border-radius: 14px; background: var(--card);
+      padding: 30px 20px; text-align: center; cursor: pointer; transition: all .15s ease;
+      box-shadow: var(--shadow); user-select: none;
+    }
+    .dropzone[hidden] { display: none; }
+    .dropzone:hover, .dropzone.over { border-color: var(--accent); background: var(--accent-soft); }
+    .vibe { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+    header a { color: var(--accent); text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+    #original[hidden] { display: none; }
+    #original { margin-top: 12px; }
+    #original img { max-width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+    .toggle-orig { font-size: 13px; color: var(--accent); background: none; border: none; padding: 6px 0; cursor: pointer; }
+    .toggle-orig:hover { text-decoration: underline; }
+    .dz-title { font-size: 17px; font-weight: 600; }
+    .dz-title kbd { font: inherit; font-size: 13px; background: var(--bg); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+    .dz-sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+    #message { color: var(--muted); font-size: 14px; margin: 14px 2px 0; }
+    #message:empty { display: none; }
+    .hint { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
+
+    .card, #cluehead:not(:empty), #explain:not(:empty) { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-top: 16px; box-shadow: var(--shadow); }
+    #cluehead:empty, #explain:empty, #controls:empty { display: none; }
+
+    /* puzzle: clue inputs wrapped around the image, aligned to its rows/columns */
+    .puzzle {
+      display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto;
+      gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 14px; margin-top: 16px; box-shadow: var(--shadow);
+    }
+    .puzzle[hidden] { display: none; }
+    .corner { grid-column: 1; grid-row: 1; }
+    .colclues { grid-column: 2; grid-row: 1; display: flex; gap: 3px; }
+    .colclues > * { flex: 1 1 0; min-width: 0; }
+    .rowclues { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; gap: 3px; }
+    .rowclues > * { flex: 1 1 0; display: flex; align-items: center; }
+    .canvas-cell { grid-column: 2; grid-row: 2; min-width: 0; }
+    #scene { max-width: 100%; display: block; border-radius: 6px; }
+
+    input.clue { width: 100%; min-width: 0; font-size: 16px; font-weight: 700; padding: 5px 0; text-align: center; border: 1.5px solid #9fb2c8; border-radius: 7px; background: #f6f9fc; color: #111; }
+    input.clue:focus { border-color: var(--accent); background: #fff; outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+    input.clue.low { border-color: var(--low); background: var(--low-soft); color: var(--low); font-weight: 700; }
+    input.clue.low:focus { border-color: var(--low); box-shadow: 0 0 0 3px rgba(217,130,43,.2); }
+    span.clue { width: 100%; text-align: center; font-weight: 800; font-size: 20px; color: #111; }
+    .rowclues span.clue { justify-content: center; }
+    .low-ex { color: var(--low); font-weight: 600; }
+
+    button { font-size: 15px; padding: 9px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--fg); cursor: pointer; }
+    button:hover { border-color: #c2cedb; }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    button.primary:hover { background: #2a6dc0; }
+    #controls { display: flex; gap: 10px; margin-top: 16px; }
+
+    .rule { font-weight: 600; margin: 0 0 8px; color: var(--accent); font-size: 15px; }
+    .chips { margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font-size: 12.5px; font-weight: 600; color: #fff; padding: 3px 9px; border-radius: 999px; }
+    .chip.water { background: var(--water); }
+    .chip.air { background: var(--air); }
+    .chip.why { background: var(--why); }
+    .chip.fill { background: #9647d6; }
+    .chip.empty { background: #f0a032; }
+    .chip.broken { background: #111; }
+    span.clue.clue-viol { color: #fff; background: var(--air); border-radius: 8px; box-shadow: 0 0 0 3px rgba(229,57,53,.25); }
+    #explain p:last-child { margin-bottom: 0; }
+    .swatch-why { color: var(--why); font-weight: 700; }
+    .swatch-fill { color: var(--accent); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Aquarium Puzzle Solver</h1>
+      <p class="sub">Get puzzles at <a href="https://www.puzzle-aquarium.com/" target="_blank" rel="noopener">puzzle-aquarium.com</a>.</p>
+      <p class="vibe">⚡ This page was 100% vibe-coded.</p>
+    </header>
+
+    <div id="drop" class="dropzone">
+      <div class="dz-title">Paste a screenshot &nbsp;<kbd>⌘V</kbd> / <kbd>Ctrl V</kbd></div>
+      <div class="dz-sub">…or drop an image here, or click to browse</div>
+      <input type="file" id="file" accept="image/*" hidden />
+    </div>
+
+    <div id="message"></div>
+    <div id="cluehead"></div>
+    <div id="puzzle" class="puzzle" hidden>
+      <div class="corner"></div>
+      <div id="colclues" class="colclues"></div>
+      <div id="rowclues" class="rowclues"></div>
+      <div class="canvas-cell"><canvas id="scene" width="10" height="10"></canvas></div>
+    </div>
+    <div id="explain"></div>
+    <div id="controls"></div>
+    <div id="origwrap"></div>
+    <div id="original" hidden><img id="origimg" alt="Original uploaded screenshot" /></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
