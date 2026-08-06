@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Долгой круглое время!
+title: Долой круглое время!
 tags: [time, telegram]
 tg_id: 515
 ---
