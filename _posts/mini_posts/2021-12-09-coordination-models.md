@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Координационные модели в организации
-tags: [teamlead]
+tags: [org]
 tg_id: 253
 ---
 [Статья-указатель](https://www.rubick.com/coordination-models/) на оные. Вкратце, есть три группы моделей:

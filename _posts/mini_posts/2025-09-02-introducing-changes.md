@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Постепенное внедрение изменений
-tags: [teamlead, softskills]
+tags: [teamlead, org, softskills]
 tg_id: 646
 ---
 Неплохой [доклад](https://www.youtube.com/watch?v=7HKJf7HGnTY) про подход к внедрению изменений в компании.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Экономика ИИ
-tags: [ai, утюг, teamlead, мысли]
+tags: [ai, утюг, org, мысли]
 tg_id: 651
 ---
 В каждом утюге новости то про то, что если не используешь ИИ, то тебя [уволят](https://www.entrepreneur.com/business-news/coinbase-ceo-fired-software-engineers-who-didnt-adopt-ai/496250), что ИИ решит все проблемы, но при этом лишит всех работы (кроме CEO, конечно). Ну и если ты не используешь ИИ, то ты лох (no FOMO).
