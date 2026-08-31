@@ -1,7 +1,7 @@
 $theme-color: #2a7ae2 !default;
 $font-font-awesome: FontAwesome;
 
-.post-content p {
+.post-content p,li {
 	hyphens: manual;
 	text-align: justify;
 }

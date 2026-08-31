@@ -16,7 +16,7 @@ git diff --merge-base master
 ```sh
 git ls-files --others --exclude-standard
 ```
-Объединяем это все через `cat` и `grep`'аем. Ну и чтобы не запоминать колбасу, добавляем функцию в ``~/.bash_aliases` (или где вы там храните своё): 
+Объединяем это все через `cat` и `grep`'аем. Ну и чтобы не запоминать колбасу, добавляем функцию в `~/.bash_aliases` (или где вы там храните своё):
 ```bash
 function branch_todo(){
   cat <(git ls-files --others --exclude-standard -z | xargs -0 cat) \
