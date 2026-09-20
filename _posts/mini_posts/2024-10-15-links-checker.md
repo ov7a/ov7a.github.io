@@ -14,4 +14,4 @@ lychee --offline --include-fragments '**/*.md'
 
 Есть и [GitHub Action](https://github.com/lycheeverse/lychee-action/), пример на моем репозитории [тут](https://github.com/ov7a/ov7a.github.io/blob/874eb018f30e48857474d00aa422f83b29303a1a/.github/workflows/check-links.yml) — при подключении [нашлось](https://github.com/ov7a/ov7a.github.io/pull/1/files) аж 3 ошибки.
 
-UPD: a после [исправления](https://github.com/ov7a/ov7a.github.io/commit/f60b93e543dd9c2a29e176f8e36f132028b7d4b5) командной строки, чтобы поддерживались относительные ссылки, нашлась еще пара косяков.
+UPD: а после [исправления](https://github.com/ov7a/ov7a.github.io/commit/f60b93e543dd9c2a29e176f8e36f132028b7d4b5) командной строки, чтобы поддерживались относительные ссылки, нашлась еще пара косяков.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Отладка GitHub Actions
-tags: [github]
+tags: [github, devops]
 tg_id: 472
 ---
 Полезный [инструмент](https://github.com/nektos/act), чтобы отлаживать GitHub Actions. Скачивает пол-интернета, но работает довольно шустро.

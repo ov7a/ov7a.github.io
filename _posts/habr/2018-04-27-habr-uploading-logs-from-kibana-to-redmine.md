@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Автоматизация загрузки логов из Kibana в Redmine
-tags: [habr, kibana, redmine, javascript, haproxy, web]
+tags: [habr, kibana, redmine, javascript, haproxy, web, elasticsearch]
 category: blog
 repost: https://habr.com/ru/post/354468/
 ---
@@ -220,7 +220,7 @@ if (requests.length == 1){
     responses = Array.from(arguments);
 }
 ```
-Второй баг связан с тем, что при смене трекера или при смене статуса заявки Redmine сохраняет все введенные данные, запрашивает новый интерфейс (прямо html cо встроенным js), пересоздает интерфейс и перезаполняет поля с помощью функции <code>replaceIssueFormWith</code>. Звучит немного дико, но это сделано для реализации workflow (а там на разных стадиях поля для ввода потенциально могут отличаться). Тут тоже пришлось сделать <s>костыль</s> ad-hoc решение:
+Второй баг связан с тем, что при смене трекера или при смене статуса заявки Redmine сохраняет все введенные данные, запрашивает новый интерфейс (прямо html со встроенным js), пересоздает интерфейс и перезаполняет поля с помощью функции <code>replaceIssueFormWith</code>. Звучит немного дико, но это сделано для реализации workflow (а там на разных стадиях поля для ввода потенциально могут отличаться). Тут тоже пришлось сделать <s>костыль</s> ad-hoc решение:
 
 ```javascript
 function installReplaceHook(){

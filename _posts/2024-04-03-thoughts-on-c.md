@@ -61,7 +61,7 @@ return 0;
 ```
 Очевидно, все вышеизложенное хорошо так субъективизировано связанными воспоминаниями из тех времен :) Но даже с учетом этого впечатления останутся положительными.
 
-Что бы там не [пророчили](https://www.whitehouse.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf), кажется, что Си пока рано умирать.
+Что бы там ни [пророчили](https://www.whitehouse.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf), кажется, что Си пока рано умирать.
 
 ![](/assets/images/c_and_other_programming_languages.jpg)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Управление доступом по ssh
-tags: [linux, ssh]
+tags: [linux, ssh, иб]
 ---
 Есть несколько способов для этого:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Статическая типизация — не панацея
-tags: [kotlin]
+tags: [kotlin, types]
 tg_id: 291
 ---
 Что выведет этот кусочек кода на Kotlin?

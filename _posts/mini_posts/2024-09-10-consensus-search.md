@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "\"Поиск\" по научным статьям"
-tags: [web, ai, мысли]
+tags: [ai, search, мысли]
 tg_id: 545
 ---
 В продолжении темы про [мертвый поиск](/2024/04/23/dead-search.html). Еще даже до написания того поста у меня была идея (вполне очевидная), что было бы прикольно написать поисковик по "достоверным" источникам (научным статьям, википедиям, официальным документациям и т.п.) и, возможно ссылкам первого уровня из них. У идеи куча минусов, но, казалось, что она будет работать лучше в некоторых сценариях, чем "обычный" поиск.
 
-Поскольку эта идея не очень оригинально, кто-то это уже сделал — [consensus.app](https://consensus.app/).
+Поскольку эта идея не очень оригинальна, кто-то это уже сделал — [consensus.app](https://consensus.app/).
 
 > Consensus is an AI-driven search engine that specializes in extracting and condensing scientific insights from peer-reviewed sources. The goal is to democratize access to expert knowledge and make science more approachable.
 

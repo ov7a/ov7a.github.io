@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Проверяемые исключения в Scala
-tags: [scala, фп]
+tags: [scala, фп, types]
 ---
 В [релизе 3.1.0](https://scala-lang.org/blog/2021/10/21/scala-3.1.0-released.html) появилась интересная фича: [проверяемые исключения](https://github.com/lampepfl/dotty/blob/release-3.1.0/docs/docs/reference/experimental/canthrow.md). Да-да, как в java, но немного по-другому.
 

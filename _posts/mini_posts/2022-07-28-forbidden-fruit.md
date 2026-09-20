@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Запретный плод
-tags: [python]
+tags: [python, fun]
 tg_id: 321
 ---
 ```

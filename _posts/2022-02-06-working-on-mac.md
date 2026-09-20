@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Я третий месяц работаю на маке и у меня почти не бомбит
-tags: [mac]
+tags: [mac, мысли]
 category: blog
 tg_id: 271
 ---

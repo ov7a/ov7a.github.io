@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Маштабирование старых приложений при HiDPI
+title: Масштабирование старых приложений при HiDPI
 tags: [linux]
 tg_id: 330
 ---
