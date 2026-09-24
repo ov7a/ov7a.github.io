@@ -6,7 +6,7 @@ tg_id: 297
 ---
 В продолжение [заметки про продуктивность](/2021/06/06/productivity.html) — а почему в команде из кучи [замотивированных](/2021/09/23/motivation.html) сеньоров все равно может получиться что-то не то?
 
-Причин может может быть масса [[1](https://habr.com/ru/company/cft/blog/656271/), [2](https://scottcochrane.com/index.php/2022/03/21/3-sure-signs-you-will-soon-have-a-mis-performance-meltdown-on-your-hands/), [3](https://twitter.com/GergelyOrosz/status/1499393647120314368)]:
+Причин может быть масса [[1](https://habr.com/ru/company/cft/blog/656271/), [2](https://scottcochrane.com/index.php/2022/03/21/3-sure-signs-you-will-soon-have-a-mis-performance-meltdown-on-your-hands/), [3](https://twitter.com/GergelyOrosz/status/1499393647120314368)]:
 1. Они делают не то, что важно (в т.ч. из-за того, что увлекаются чем-то интересным для себя), часто из-за отсутствия четких [целей](/2021/09/09/self-organizing-team.html), отсутствует фокус или пытаются сделать все и сразу.
 2. Они ждут другую команду (из-за плохого разделения, из-за [мутных процессов](/2021/11/30/hard-problems-of-development.html) или из-за чрезмерной специализации, когда не можешь помочь другой команде).
 3. Нет четкого понимания, что нужно сделать, тратится время на [выяснение этого](/2022/01/18/why-formal-methods-are-rarely-used.html) (хорошо еще, если до разработки, плохо, если на миллионе встреч).

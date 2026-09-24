@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Синтаксис C++
-tags: [c]
+tags: [c, fun]
 tg_id: 748
 ---
 На днях я узнал, что это

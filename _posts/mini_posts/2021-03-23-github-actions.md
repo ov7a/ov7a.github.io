@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitHub Actions
-tags: [github]
+tags: [github, devops]
 ---
 Решил попробовать на прошлой неделе, после закрытия долга [с задачей про заявки](/2021/02/02/shame.html).
 

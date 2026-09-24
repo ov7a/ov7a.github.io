@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Compose key
-tags: [linux, windows]
+tags: [unicode, linux, windows, mac]
 ---
 Надеюсь, что ни для кого не секрет, что для текста лучше использовать длинное тире '—', а не знак минуса '-'. Но проблема в том, как его вводить.
 

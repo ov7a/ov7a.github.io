@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Сравнение веток в Intellij Idea
-tags: [intellij]
+tags: [intellij, git]
 ---
 Intellij Idea в новых версиях умеет сравнивать между собой ветки - причем как по логу коммитов, так и по файлам.
 Для этого надо в выборе ветки выбрать compare.

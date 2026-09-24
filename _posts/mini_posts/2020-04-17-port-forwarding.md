@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Перенаправление портов
-tags: [linux, cli, ssh, haproxy, docker]
+tags: [linux, cli, net, ssh, haproxy, docker]
 ---
 Способов сделать это - тьма тьмущая:
 

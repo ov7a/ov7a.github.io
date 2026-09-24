@@ -25,11 +25,6 @@ jobs:
           cache-version: 0
           working-directory: website
 
-      - name: Check TG ids
-        run: |
-          cd website
-          bundle exec ruby .github/workflows/check_tg_ids.rb
-
       - name: Get search
         run: |
           curl -sSL 'https://github.com/ov7a/klava/releases/latest/download/release.tar.gz' | tar -xz
@@ -56,6 +51,11 @@ jobs:
             --remap '^https?\://ov7a.github.io/.+$ USE_RELATIVE_LINKS'
             --exclude-path 'moving_dom/index.html'
             --exclude '##?$'
+
+      - name: Check TG ids
+        run: |
+          cd website
+          bundle exec ruby .github/workflows/check_tg_ids.rb
 
       - name: Upload artifact
         id: deployment

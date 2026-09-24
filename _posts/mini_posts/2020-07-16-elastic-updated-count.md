@@ -8,7 +8,7 @@ tags: [elasticsearch]
 updated
   The number of documents that were successfully updated.
 ```
-Внимание, вопрос: учитываются все затронутные документы или все измененные? Вроде как все затронутые, да и обновления могут быть без изменений документа (для того, чтобы обновить документ в индексе, например). Но хочется побольше уверенности.
+Внимание, вопрос: учитываются все затронутые документы или все измененные? Вроде как все затронутые, да и обновления могут быть без изменений документа (для того, чтобы обновить документ в индексе, например). Но хочется побольше уверенности.
 
 Роемся в исходниках, недолгий поиск по ключевому слову `updated` приводит сначала к [WorkerBulkByScrollTaskState](https://github.com/elastic/elasticsearch/blob/2a67bee874f2469fae477f3b7471fbdf3a548b71/server/src/main/java/org/elasticsearch/index/reindex/WorkerBulkByScrollTaskState.java#L65), а потом к [AbstractAsyncBulkByScrollAction](https://github.com/elastic/elasticsearch/blob/2a67bee874f2469fae477f3b7471fbdf3a548b71/modules/reindex/src/main/java/org/elasticsearch/index/reindex/AbstractAsyncBulkByScrollAction.java#L367):
 ```java
