@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ru' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/word_cube.css' | relative_url }}">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>{{ page.heading | default: page.title }}</h1>
+    <p class="rules">{{ page.task }} Буквы слова идут по соседним кубикам — соседи и по граням, и по рёбрам, и по углам, во всех трёх измерениях. Один кубик в слове используется один раз.</p>
+  </header>
+
+  <div class="main">
+    <div class="stagebox">
+      <div class="stage" id="stage"></div>
+      <div class="stage-ui">
+        <span class="hint">Тяни — вертеть, колесо или щипок — масштаб, клик — буква</span>
+        <label class="spread" for="spread">Раздвинуть <input id="spread" type="range" min="1.15" max="2.4" step="0.05" value="1.75"></label>
+      </div>
+    </div>
+
+    <div class="side">
+      <section class="card" aria-live="polite">
+        <h2>Слово</h2>
+        <div class="word empty" id="word">Выбери первую букву</div>
+        <div class="row">
+          <button id="clear">Сбросить выбор</button>
+        </div>
+        <div class="msg" id="msg"></div>
+      </section>
+
+      <section class="card">
+        <div class="layers" id="layers"></div>
+      </section>
+
+      <section class="card">
+        <div class="progress"><b id="count">0</b><span id="total">из 0</span></div>
+        <div class="bar"><i id="bar"></i></div>
+        <div class="found" id="found"></div>
+        <div class="found bonusrow" id="bonus" hidden></div>
+        <div class="row"><button id="reset">Начать заново</button></div>
+      </section>
+    </div>
+  </div>
+  {{ content }}
+</div>
+
+<script type="application/json" id="puzzle-data">
+{
+  "board": {{ page.board | jsonify }},
+  "words": {{ page.words | jsonify }},
+  "bonus_words": {{ page.bonus_words | jsonify }}
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script type="module" src="{{ '/assets/js/word_cube.js' | relative_url }}"></script>
+</body>
+</html>
