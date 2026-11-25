@@ -47,7 +47,7 @@ const bonusAnswers = (puzzle.bonus_words || []).filter(canSpell);
 let found = loadFound();
 let selection = [];
 let repeatedWord = "";
-let liveCells = cellsOfRemainingAnswers();
+let liveCells = replayLiveCells();
 
 function loadFound() {
 	try {
@@ -66,15 +66,43 @@ function saveFound() {
 	}
 }
 
-function cellsOfRemainingAnswers() {
-	const live = new Set();
-	answers
-		.filter(word => !found.includes(word))
-		.forEach(word => forEachPath(word, path => path.forEach(cell => live.add(cell))));
+function cellsOnAnyPath(words) {
+	const used = new Set();
+	words.forEach(word => forEachPath(word, path => path.forEach(cell => used.add(cell))));
+	return used;
+}
+
+// Каждое оставшееся слово держит на кубе один свой путь из ещё видимых клеток, остальные клетки исчезают.
+// Из нескольких путей слова берём тот, что больше пересекается с уже занятыми клетками.
+function shrinkLiveCells(live, remainingWords) {
+	const kept = new Set();
+	remainingWords.forEach(word => {
+		let best = null;
+		forEachPath(word, path => {
+			if (!path.every(cell => live.has(cell))) return false;
+			const overlap = path.filter(cell => kept.has(cell)).length;
+			if (!best || overlap > best.overlap) best = { path: [...path], overlap };
+			return overlap === path.length;
+		});
+		best?.path.forEach(cell => kept.add(cell));
+	});
+	return kept;
+}
+
+// Видимые клетки зависят от порядка, в котором находили слова, поэтому при загрузке повторяем его.
+function replayLiveCells() {
+	let live = cellsOnAnyPath(answers);
+	const remaining = [...answers];
+	found.forEach(word => {
+		if (!remaining.includes(word)) return;
+		remaining.splice(remaining.indexOf(word), 1);
+		live = shrinkLiveCells(live, remaining);
+	});
 	return live;
 }
 
 const foundAnswers = () => answers.filter(word => found.includes(word));
+const remainingAnswers = () => answers.filter(word => !found.includes(word));
 const lastSelected = () => selection[selection.length - 1];
 const selectedWord = () => selection.map(cell => board[cell]).join("");
 
@@ -109,7 +137,7 @@ function acceptSelectedWord() {
 	} else if (answers.includes(word)) {
 		addFound(word);
 		const cellsBefore = liveCells.size;
-		liveCells = cellsOfRemainingAnswers();
+		liveCells = shrinkLiveCells(liveCells, remainingAnswers());
 		const vanished = cellsBefore - liveCells.size;
 		if (foundAnswers().length === answers.length) {
 			showMessage(`Все ${answers.length} найдены! Куб пуст.`, true);
@@ -148,7 +176,7 @@ function restart() {
 	selection = [];
 	repeatedWord = "";
 	saveFound();
-	liveCells = cellsOfRemainingAnswers();
+	liveCells = replayLiveCells();
 	showMessage("Начали заново.");
 	render();
 }
